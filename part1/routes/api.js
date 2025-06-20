@@ -11,7 +11,7 @@ router.get('/dogs', async (req, res) => {
     'SELET Dogs.name, Dogs.size, Users.username FROM Dogs \
     INNER JOIN Users ON Dogs.owner_id=USERS.user_id'
   );
-  res.status(200).send('test');
+  res.status(200).send(query);
 });
 
 module.exports = router;

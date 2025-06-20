@@ -21,6 +21,9 @@ INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating) VALUES
 */
 
 SELECT
-Users.username AS walker_username, COUNT(WalkRatings.rating_id) AS total_ratings FROM WalkRatings
+Users.username AS walker_username,
+COUNT(WalkRatings.rating_id) AS total_ratings,
+AVERAGE(WalkRatings.rating_id) as rating
+FROM WalkRatings
 INNER JOIN Users ON Users.user_id=WalkRatings.walker_id
 GROUP BY WalkRatings.walker_id;

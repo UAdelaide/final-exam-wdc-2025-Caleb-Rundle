@@ -8,17 +8,7 @@
   <body>
     <h2>Look at this dog!</h2>
 
-    <form @submit.prevent="handleLogin">
-      <label
-        >Email:
-        <input type="email" v-model="email" required />
-      </label>
-      <label
-        >Password:
-        <input type="password" v-model="password" required />
-      </label>
-      <button type="submit">Login</button>
-    </form>
+    <button type="submit">Login</button>
 
     <script>
       const { createApp } = Vue;

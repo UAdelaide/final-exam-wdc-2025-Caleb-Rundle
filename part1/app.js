@@ -4,9 +4,9 @@ const mysql = require('mysql');
 const app = express();
 const PORT = 3000;
 const pool = mysql.createPool({
-    host: 'localhost',
-    
-})
+  host: 'localhost',
+  database: 'DogWalkService'
+});
 
 app.listen(PORT, (error) => {
   if (!error) {
@@ -15,7 +15,6 @@ app.listen(PORT, (error) => {
     console.log('Failure to start: ', error);
   }
 });
-
 
 app.use((req, res, next) => {
   req.pool = pool;

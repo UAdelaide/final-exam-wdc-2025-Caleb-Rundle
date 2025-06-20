@@ -19,6 +19,9 @@ WHERE role='walker';
 SELECT COUNT(*) FROM WalkRatings
 WHERE walker_id=2;
 
+SELECT COUNT(*) FROM WalkApplications
+
+
 /* SELECT
 Users.username AS walker_username,
 COUNT(*) AS total_ratings,

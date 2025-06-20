@@ -43,7 +43,10 @@ WHERE WalkRequests.status='open';
 });
 
 router.get('/walkers/summary', async (req, res) => {
-  const 
+  const firstQuery = `
+  
+`;
+  const secondQuery = '';
 });
 
 module.exports = router;

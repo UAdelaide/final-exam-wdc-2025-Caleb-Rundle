@@ -17,7 +17,7 @@
       createApp({
         data() {
           return {
-            email: '',
+            dog: '',
             password: '',
             errorMessage: ''
           };
@@ -27,10 +27,11 @@
             const {message, status} = await fetch('https://dog.ceo/api/breeds/image/random');
 
             if (status == 200) {
-              ;
+              this.dog = message;
             }
             else {
               this.errorMessage = 'Dog Failed D:';
+              return;
             }
           }
           async handleLogin() {

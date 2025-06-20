@@ -60,12 +60,12 @@
           });
 
           if (response.status === 200) {
-            const data = await response.json();
-            if (data.user.role == 'owner') {
+            const role = await response.json();
+            if (data == 'owner') {
               window.location.href = 'owner-dashboard.html';
               return;
             }
-            if (data.user.role == 'walker') {
+            if (data == 'walker') {
               window.location.href = 'walker-dashboard.html';
             }
             this.errorMessage = 'Account is invalid!';

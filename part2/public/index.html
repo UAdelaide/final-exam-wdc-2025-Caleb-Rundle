@@ -60,8 +60,8 @@
           });
 
           if (response.status === 200) {
-            const  = await response.json();
-            console.log(user.user_id);
+            const data = await response.json();
+            console.log(data.user);
             return;
           } else {
             this.errorMessage = 'Invalid email or password.';

@@ -18,7 +18,7 @@ SELECT * FROM WalkRatings
 WHERE walker_id IN
 (
     SELECT user_id FROM Users
-    WHERE role='walker';
+    WHERE role='walker'
 );
 
 /* SELECT

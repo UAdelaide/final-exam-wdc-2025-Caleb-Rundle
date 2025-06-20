@@ -8,7 +8,7 @@ console.log('Loaded routes/api.js');
 
 router.get('/dogs', async (req, res) => {
   const query =
-    'SELECT Dogs.name AS dog_name, Dogs.size AS size, Users.username AS owner_username \
+    'SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username \
     FROM Dogs INNER JOIN Users ON Dogs.owner_id=Users.user_id';
 
   try {

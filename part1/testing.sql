@@ -27,7 +27,7 @@ CREATE TABLE WalkRatings (
     CONSTRAINT unique_rating_per_walk UNIQUE (request_id)
 );
 
-INSERT INTO WalkRatings 
+INSERT INTO WalkRatings (request_id, walker_id, )
 
 SELECT
 Users.username as walker_username,

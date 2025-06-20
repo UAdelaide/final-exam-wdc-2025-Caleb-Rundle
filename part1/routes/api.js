@@ -7,11 +7,11 @@ console.log('Loaded routes/api.js');
 // INNER JOIN Users ON Dogs.owner_id=Users.user_id;
 
 router.get('/dogs', async (req, res) => {
-  const query = 'SELECT * FROM Dogs';
+  const query = 'SELECT ? FROM Dogs';
   // 'SELECT Dogs.name, Dogs.size, Users.username FROM Dogs INNER JOIN Users ON Dogs.owner_id=Users.user_id';
 
   try {
-    const result = await req.sqlQuery(query, []);
+    const result = await req.sqlQuery(query, 'name');
   } catch (queryError) {
     return res.status(500).send(queryError);
   }

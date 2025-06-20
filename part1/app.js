@@ -23,8 +23,8 @@ app.use((req, res, next) => {
                 }
             });
         });
-    }
-})
+    next();
+});
 
 const apiRouter = require('./routes/api');
 

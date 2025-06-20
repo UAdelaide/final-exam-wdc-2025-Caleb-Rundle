@@ -4,7 +4,7 @@ require('dotenv').config();
 const mysql = require('mysql');
 
 const app = express();
-const PORT = 8080;
+const PORT = 3000;
 const pool = mysql.createPool({
   host: 'localhost',
   database: 'DogWalkService'

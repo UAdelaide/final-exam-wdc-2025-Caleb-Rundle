@@ -16,7 +16,7 @@ WHERE WalkRequests.status='open';
 SELECT user_id FROM Users
 WHERE role='walker';
 
-SELECT
+/* SELECT
 Users.username AS walker_username,
 COUNT(*) AS total_ratings,
 AVG(WalkRatings.rating) AS average_rating
@@ -27,4 +27,4 @@ GROUP BY WalkRatings.walker_id;
 SELECT COUNT(*) FROM WalkApplications
 INNER JOIN WalkRequests on WalkRequests.request_id=WalkApplications.request_id
 WHERE WalkRequests.status='completed'
-GROUP BY WalkApplications.walker_id;
+GROUP BY WalkApplications.walker_id; */

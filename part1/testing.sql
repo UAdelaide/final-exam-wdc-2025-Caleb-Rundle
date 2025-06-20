@@ -18,4 +18,5 @@ INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating) VALUES
 (2, 2, 1, 4),
 (3, 5, 1, 2);
 
-SELECT Users.username AS walker_username, COUNT(WalkRatings.)
+SELECT Users.username AS walker_username, COUNT(WalkRatings.rating_id) FROM WalkRatings
+WHERE WalkRatings.

@@ -29,4 +29,5 @@ AVG(WalkRatings.rating) as average_rating,
 (SELECT COUNT(*) FROM WalkRequests WHERE )
 FROM WalkRatings
 INNER JOIN Users ON Users.user_id=WalkRatings.walker_id
+INNER JOIN WalkRequests ON 
 GROUP BY WalkRatings.walker_id;

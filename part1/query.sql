@@ -23,7 +23,8 @@ INSERT INTO Dogs (owner_id, name, size) VALUES
 -- I'll hardcode 2 requests and use subqueries for the rest to demonstrate knowledge of both
 -- methods as I'm unsure whether the question wants you to recognize this fact or not.
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES
-()
+-- Subquery Method
+((SELECT ))
 
 SELECT * FROM Users;
 SELECT * FROM Dogs;

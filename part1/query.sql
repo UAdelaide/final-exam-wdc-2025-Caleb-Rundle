@@ -32,7 +32,7 @@ INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, st
 INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating) VALUES
 (1, 2, 1, 5),
 (2, 2, 1, 4),
-(3, 5, 1, 2);
+(3, 2, 1, 2);
 
 INSERT INTO WalkApplications (request_id, walker_id) VALUES (1, 2), (5, 2), (6, 5);
 

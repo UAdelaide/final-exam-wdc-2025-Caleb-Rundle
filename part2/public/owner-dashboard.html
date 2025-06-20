@@ -98,8 +98,11 @@
           try {
             const res = await fetch('/api/users/me');
             if (res.status != 200) {
-              throw new Error('Invalid Session')
+              throw new Error('Invalid Session');
             }
+          }
+          catch (err) {
+            window.location.href
           }
         }
 

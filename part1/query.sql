@@ -18,6 +18,7 @@ INSERT INTO Dogs (owner_id, name, size) VALUES
 ((SELECT user_id FROM Users WHERE username='alice123'), 'Max Junior', 'small'),
 ((SELECT user_id FROM Users WHERE username='alice123'), 'Max Senior', 'large'),
 ((SELECT user_id FROM Users WHERE username='james123'), 'John Lick', 'large');
+-- This line would cause issu
 -- ((SELECT user_id FROM Users WHERE username='james123'), 'Max', 'large');
 
 -- You should NOT query by dog name here because dog names are not UNIQUE like with usernames.

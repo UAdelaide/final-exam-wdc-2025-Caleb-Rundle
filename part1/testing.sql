@@ -26,6 +26,3 @@ SELECT COUNT(*) FROM WalkApplications
 INNER JOIN WalkRequests on WalkRequests.request_id=WalkApplications.request_id
 WHERE WalkRequests.status='completed'
 GROUP BY WalkApplications.walker_id;
-
-SELECT WalkRequests.status FROM WalkApplications
-INNER JOIN WalkRequests on WalkRequests.request_id=WalkApplications.request_id;

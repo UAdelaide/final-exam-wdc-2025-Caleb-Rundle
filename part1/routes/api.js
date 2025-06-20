@@ -7,6 +7,7 @@ console.log('Loaded routes/api.js');
 // INNER JOIN Users ON Dogs.owner_id=Users.user_id;
 
 router.get('/dogs', (req, res) => {
+    const query = 'SELECT Dogs.name, Dogs.size, Users.username FROM '
   res.status(200).send('test');
 });
 

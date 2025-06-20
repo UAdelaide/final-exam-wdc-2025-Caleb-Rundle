@@ -11,7 +11,10 @@ app.listen(PORT, (error) => {
   }
 });
 
-app.use((req, res, next))
+app.use((req, res, next) => {
+    req.pool = pool;
+    req.query()
+})
 
 const apiRouter = require('./routes/api');
 

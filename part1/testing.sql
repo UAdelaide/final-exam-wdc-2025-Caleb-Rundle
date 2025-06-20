@@ -19,7 +19,7 @@ SELECT
 Users.username,
 COUNT(DISTINCT WalkRatings.rating_id) AS total_ratings,
 AVG(WalkRatings.rating) AS average_rating,
-COUNT(WalkRequests.request_id) AS completed_walks
+COUNT(DISTINCT WalkRequests.request_id) AS completed_walks
 FROM Users
 LEFT JOIN WalkRatings ON Users.user_id=WalkRatings.walker_id
 LEFT JOIN WalkApplications ON WalkApplications.walker_id=Users.user_id

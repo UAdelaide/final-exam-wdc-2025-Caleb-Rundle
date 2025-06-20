@@ -6,27 +6,19 @@
   </head>
 
   <body>
-      <h2>Login</h2>
+    <h2>Login</h2>
 
-      <form @submit.prevent="handleLogin">
-        <label
-          >Email:
-          <input type="email" v-model="email" required />
-        </label>
-        <label
-          >Password:
-          <input type="password" v-model="password" required />
-        </label>
-        <button type="submit">Login</button>
-      </form>
-
-      <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
-
-      <p>Don't have an account?</p>
-      <button type="button" class="secondary-btn" @click="goToRegister">
-        Create Account
-      </button>
-    </div>
+    <form @submit.prevent="handleLogin">
+      <label
+        >Email:
+        <input type="email" v-model="email" required />
+      </label>
+      <label
+        >Password:
+        <input type="password" v-model="password" required />
+      </label>
+      <button type="submit">Login</button>
+    </form>
 
     <script>
       const { createApp } = Vue;

@@ -35,7 +35,7 @@ LEFT JOIN WalkRequests ON WalkRequests.request_id=WalkApplications.request_id
 AND WalkRequests.status='completed'
 -- only grab matches with walkers
 WHERE Users.role='walker'
--- group results by name
+-- group results by id
 GROUP BY Users.user_id;
 
 /* SELECT

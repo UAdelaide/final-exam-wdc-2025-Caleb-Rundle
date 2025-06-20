@@ -48,7 +48,7 @@
             this.errorMessage = 'Please enter both email and password.';
             return;
           }
-          const { status } = await fetch('/login', {
+          const { status } = await fetch('/routes/userRoutes/login', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

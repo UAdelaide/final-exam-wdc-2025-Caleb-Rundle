@@ -4,6 +4,7 @@ require('dotenv').config();
 const mysql = require('mysql');
 
 const app = express();
+const PORT = 3000;
 
 // Middleware
 app.use(express.json());

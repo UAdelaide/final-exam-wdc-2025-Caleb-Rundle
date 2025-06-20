@@ -45,22 +45,28 @@ WHERE WalkRequests.status='open';
 router.get('/walkers/summary', async (req, res) => {
   const firstQuery = `
 SELECT
-Users.user_id,
+-- walker names
 Users.username AS walker_username,
-COUNT(WalkRatings.rating_id) AS total_ratings,
-AVG(WalkRatings.rating) AS average_rating
+-- count ratings
+COUNT(DISTINCT WalkRatings.rating_id) AS total_ratings,
+-- average ratings
+IFNULL(AVG(WalkRatings.rating), 0) AS average_rating,
+-- count complete walks
+COUNT(DISTINCT WalkRequests.request_id) AS completed_walks
+-- Users is our LEFT
 FROM Users
+-- join with walk ratings, but maintain all users found
 LEFT JOIN WalkRatings ON Users.user_id=WalkRatings.walker_id
-WHERE Users.role='walker'
-GROUP BY WalkRatings.walker_id, Users.username;
-`;
-  const secondQuery = `
-SELECT Users.user_id, COUNT(WalkRequests.request_id) FROM Users
+-- join with walk applications but maintain all users found
 LEFT JOIN WalkApplications ON WalkApplications.walker_id=Users.user_id
+-- join with walk requests but maintain all users found
 LEFT JOIN WalkRequests ON WalkRequests.request_id=WalkApplications.request_id
+-- only look at requests that are completed
 AND WalkRequests.status='completed'
+-- only grab matches with walkers
 WHERE Users.role='walker'
-GROUP BY WalkApplications.walker_id, Users.username;
+-- group results by id
+GROUP BY Users.user_id;
 `;
   let firstResult;
   let secondResult;

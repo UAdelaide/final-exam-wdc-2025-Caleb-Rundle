@@ -9,13 +9,13 @@
         Three more walk requests with details of your choosing.
 */
 
-INSERT INTO Users(username, email, password_hash, role) VALUES
+INSERT INTO Users (username, email, password_hash, role) VALUES
 ('alice123', 'alice@example.com', 'hashed123', 'owner'), -- 1
 ('bobwalker', 'bob@example.com', 'hashed456', 'walker'), -- 2
 ('carol123', 'carol@example.com', 'hashed789', 'owner'), -- 3
 ('james123', 'james@example.com', 'hashed101', 'owner'), -- 4
 ('johnwalker', 'john@example.com', 'hashed112', 'walker'); -- 5
 
-INSERT INTO Dogs(name, size)
+INSERT INTO Dogs (name, size)
 
 SELECT * FROM Users;

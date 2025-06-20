@@ -33,4 +33,5 @@ INNER JOIN Users ON Users.user_id=WalkRatings.walker_id
 GROUP BY WalkRatings.walker_id;
 
 SELECT COUNT(*) FROM WalkRequests
+INNER JOIN WalkApplications on 
 GROUP BY

@@ -70,7 +70,7 @@ GROUP BY WalkApplications.walker_id, Users.username;
     return res.status(500).send(queryError);
   }
   try {
-    secondResult = await req.sqlQuery(query);
+    secondResult = await req.sqlQuery(secondQuery);
   } catch (queryError) {
     return res.status(500).send(queryError);
   }

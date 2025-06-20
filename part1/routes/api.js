@@ -42,4 +42,8 @@ WHERE WalkRequests.status='open';
   }
 });
 
+router.get('/walkers/summary', async (req, res) => {
+  const 
+});
+
 module.exports = router;

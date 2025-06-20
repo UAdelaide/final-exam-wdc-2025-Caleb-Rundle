@@ -28,6 +28,9 @@
         },
         methods: {
           async getDog() {
+                      const {message, status} = await fetch('/user/profile').then((res) =>
+            res.json()
+          );
             const { message, status } = await fetch(
               'https://dog.ceo/api/breeds/image/random'
             );

@@ -25,6 +25,8 @@
       <button type="submit">Login</button>
     </form>
 
+    <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
+
     <a href="owner-dashboard.html" class="btn btn-outline-primary me-2">Owner Dashboard</a>
     <a href="walker-dashboard.html" class="btn btn-outline-success">Walker Dashboard</a>
   </div>
@@ -34,6 +36,7 @@
     createApp({
       data() {
         return {
+          
           message: 'Welcome to the Dog Walking Service!'
         };
       }

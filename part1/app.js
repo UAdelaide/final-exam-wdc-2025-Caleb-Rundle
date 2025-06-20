@@ -23,7 +23,7 @@ app.listen(PORT, (error) => {
 
 app.use((req, res, next) => {
   const { method, url } = req;
-  console.log(method);
+  console.log(method + ' ' + url);
 });
 
 app.use((req, res, next) => {

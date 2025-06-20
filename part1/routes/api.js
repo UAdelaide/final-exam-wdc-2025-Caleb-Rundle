@@ -13,9 +13,9 @@ router.get('/dogs', async (req, res) => {
     INNER JOIN Users ON Dogs.owner_id=USERS.user_id'
     );
   } catch (queryError) {
-    res.status(500).send(queryError);
+    return res.status(500).send(queryError);
   }
-  res.status(200).send(query);
+  return res.status(200).send(query);
 });
 
 module.exports = router;

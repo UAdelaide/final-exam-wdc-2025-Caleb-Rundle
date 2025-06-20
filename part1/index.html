@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Login</title>
-    <script src="https://unpkg.com/vue@3"></script>
-  </head>
 
-  <body>
-    <h2>Click button to see dog!</h2>
+<head>
+  <title>Login</title>
+  <script src="https://unpkg.com/vue@3"></script>
+</head>
 
-    <div id="app">
-      <button type="button" @click="getDog">Get Dog!</button>
+<body>
+  <h2>Click button to see dog!</h2>
 
-      <p>{{ message }}</p>
+  <div id="app">
+    <button type="button" @click="getDog">Get Dog!</button>
 
-      <img v-if="dog" :src="dog" src="dog" alt="random dog" />
-    </div>
+    <p>{{ message }}</p>
 
-    <script>
-      const { createApp } = Vue;
+    <img v-if="dog" :src="dog" src="dog" alt="random dog">
+  </div>
 
-      createApp({
-        data() {
-          return {
-            dog: '',
-            message: ''
-          };
-        },
-        methods: {
-          async getDog() {
-            const { message, status } = await fetch(
-              'https://dog.ceo/api/breeds/image/random'
-            ).then((res) => res.json());
-            if (status == 'success') {
-              this.dog = message;
-              this.message = 'Dog Succeed :D';
-            } else {
-              this.message = 'Dog Fail D:';
-            }
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          dog: '',
+          message: ''
+        };
+      },
+      methods: {
+        async getDog() {
+          const { message, status } = await fetch(
+            'https://dog.ceo/api/breeds/image/random'
+          ).then((res) => res.json());
+          if (status == 'success') {
+            this.dog = message;
+            this.message = 'Dog Succeed :D';
+          } else {
+            this.message = 'Dog Fail D:';
           }
         }
-      }).mount('#app');
-    </script>
-  </body>
+      }
+    }).mount('#app');
+  </script>
+</body>
+
 </html>

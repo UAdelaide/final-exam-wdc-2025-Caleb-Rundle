@@ -13,4 +13,5 @@ INNER JOIN Dogs ON Dogs.dog_id=WalkRequests.dog_id
 INNER JOIN Users ON Dogs.owner_id=Users.user_id
 WHERE WalkRequests.status='open';
 
-SELECT Users.username as walker_username, 
+SELECT
+Users.username as walker_username,

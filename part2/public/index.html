@@ -41,7 +41,34 @@
           errorMessage: '',
           message: 'Welcome to the Dog Walking Service!'
         };
-      }
+      },
+                async handleLogin() {
+            if (!this.email || !this.password) {
+              this.errorMessage = 'Please enter both email and password.';
+              return;
+            }
+            const { status } = await fetch('/login', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                email: this.email,
+                password: this.password
+              })
+            });
+            if (status === 200) {
+              window.location.href = '/user/home';
+              return;
+            } else {
+              this.errorMessage = 'Invalid email or password.';
+              return;
+            }
+          },
+          goToRegister() {
+            window.location.href = '/register-page';
+          }
+        },
     }).mount('#app');
   </script>
 

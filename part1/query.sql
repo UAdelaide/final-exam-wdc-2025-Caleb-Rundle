@@ -17,8 +17,6 @@ INSERT INTO Users (username, email, password_hash, role) VALUES
 ('johnwalker', 'john@example.com', 'hashed112', 'walker'); -- 5
 
 INSERT INTO Dogs (owner_id, name, size) VALUES
-(
-    (SELECT user_id FROM Users WHERE), 'Max', 'medium'
-);
+((SELECT user_id FROM Users WHERE username = ), 'Max', 'medium');
 
 SELECT * FROM Users;

@@ -22,7 +22,7 @@ app.listen(PORT, (error) => {
 // Define middleware
 
 app.use((req, res, next) => {
-  console.log(req);
+  const { url } = req;
 });
 
 app.use((req, res, next) => {

@@ -21,7 +21,9 @@ app.listen(PORT, (error) => {
 
 // Define middleware
 
-app.use((req))
+app.use((req, res, next) => {
+    res.
+})
 
 app.use((req, res, next) => {
   req.pool = pool;

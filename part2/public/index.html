@@ -25,9 +25,12 @@
         <input type="password" class="form-control" v-model="password" required>
       </div>
       <button type="submit" class="btn btn-primary">Login</button>
-    </form>
+      </label>
+      <button type="submit" class="btn btn-outline-primary">Login</button>
+  </div>
+  </form>
 
-    <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
+  <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
   </div>
 
   <script>

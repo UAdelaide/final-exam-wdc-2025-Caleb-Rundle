@@ -20,7 +20,8 @@ SELECT COUNT(*) FROM WalkRatings
 WHERE walker_id=2;
 
 SELECT COUNT(*) FROM WalkApplications
-
+INNER
+WHERE WalkRequests.status='completed';
 
 /* SELECT
 Users.username AS walker_username,

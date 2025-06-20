@@ -8,7 +8,8 @@ const app = express();
 // Middleware
 
 app.use(session({
-  secret:
+  secret: 'change-in-production',
+  resave:false
 }))
 
 app.use(express.json());

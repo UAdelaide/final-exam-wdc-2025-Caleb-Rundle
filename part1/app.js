@@ -9,6 +9,8 @@ const pool = mysql.createPool({
 });
 const apiRouter = require('./routes/api');
 
+// Start server
+
 app.listen(PORT, (error) => {
   if (!error) {
     console.log('Server running on port ' + PORT);
@@ -16,6 +18,8 @@ app.listen(PORT, (error) => {
     console.log('Failure to start: ', error);
   }
 });
+
+// Define middleware
 
 app.use((req, res, next) => {
   req.pool = pool;

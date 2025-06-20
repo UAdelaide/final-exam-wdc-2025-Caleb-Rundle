@@ -9,8 +9,6 @@ const app = express();
 
 app.use(session({
   secret:
-  resave:
-  save
 }))
 
 app.use(express.json());

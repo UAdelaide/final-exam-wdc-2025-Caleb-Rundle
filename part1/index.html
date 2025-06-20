@@ -24,7 +24,7 @@
         },
         methods: {
           async getDog() {
-            const {message, status} = await fetch('')
+            const {message, status} = await fetch('https://dog.ceo/api/breeds/image/random');
           }
           async handleLogin() {
             if (!this.email || !this.password) {

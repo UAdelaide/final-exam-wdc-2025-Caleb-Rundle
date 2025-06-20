@@ -11,9 +11,9 @@
     <div id="app">
       <button type="button" @click="getDog">Get Dog!</button>
 
-      <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
+      <p v-if="errorMessage">{{ errorMessage }}</p>
 
-      <p v-else=""
+      <p v-else="dog">{{ dog }}</p>
     </div>
 
     <script>

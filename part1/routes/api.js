@@ -13,6 +13,7 @@ INNER JOIN Users ON Dogs.owner_id=Users.user_id;
 `;
 
   try {
+    // 
     const result = await req.sqlQuery(query);
     return res.status(200).send(result);
   } catch (queryError) {

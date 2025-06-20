@@ -45,6 +45,7 @@ WHERE WalkRequests.status='open';
 router.get('/walkers/summary', async (req, res) => {
   const firstQuery = `
 SELECT
+Users.user_id,
 Users.username AS walker_username,
 COUNT(WalkRatings.rating_id) AS total_ratings,
 AVG(WalkRatings.rating) AS average_rating
@@ -54,7 +55,7 @@ WHERE Users.role='walker'
 GROUP BY WalkRatings.walker_id, Users.username;
 `;
   const secondQuery = `
-SELECT Users.username, COUNT(WalkRequests.request_id) FROM Users
+SELECT Users.user_id, COUNT(WalkRequests.request_id) FROM Users
 LEFT JOIN WalkApplications ON WalkApplications.walker_id=Users.user_id
 LEFT JOIN WalkRequests ON WalkRequests.request_id=WalkApplications.request_id
 AND WalkRequests.status='completed'

@@ -14,7 +14,9 @@ app.listen(PORT, (error) => {
 app.use((req, res, next) => {
     req.pool = pool;
     req.sqlQuery = async (query, variables) => {
-        pool.query
+        new Promise((resolve, reject) => {
+            pool.query(query, variables)
+        })
     }
 })
 

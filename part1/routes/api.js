@@ -45,7 +45,7 @@ WHERE WalkRequests.status='open';
 router.get('/walkers/summary', async (req, res) => {
   // Comments have been left in the query (created in testing.sql)
   // to help explain as it's a complicated query
-  const firstQuery = `
+  const query = `
 SELECT
 -- walker names
 Users.username AS walker_username,
@@ -70,8 +70,6 @@ WHERE Users.role='walker'
 -- group results by id
 GROUP BY Users.user_id;
 `;
-  let firstResult;
-  let secondResult;
   try {
     firstResult = await req.sqlQuery(firstQuery);
   } catch (queryError) {

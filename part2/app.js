@@ -4,11 +4,6 @@ require('dotenv').config();
 const mysql = require('mysql');
 
 const app = express();
-const PORT = 3000;
-const pool = mysql.createPool({
-  host: 'localhost',
-  database: 'DogWalkService'
-});
 
 // Middleware
 app.use(express.json());
@@ -27,21 +22,6 @@ app.use((req, res, next) => {
   ++count;
   const { method, url } = req;
   console.log(`Request ${count}: ${method} ${url}`);
-  next();
-});
-
-app.use((req, res, next) => {
-  req.pool = pool;
-  req.sqlQuery = async (query, variables) =>
-    new Promise((resolve, reject) => {
-      pool.query(query, variables, (queryError, results) => {
-        if (queryError) {
-          reject(queryError);
-        } else {
-          resolve(results);
-        }
-      });
-    });
   next();
 });
 

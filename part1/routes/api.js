@@ -12,10 +12,10 @@ router.get('/dogs', async (req, res) => {
 
   try {
     const result = await req.sqlQuery(query, 'name');
+    return res.status(200).send(result);
   } catch (queryError) {
     return res.status(500).send(queryError);
   }
-  return res.status(200).send(result);
 });
 
 module.exports = router;

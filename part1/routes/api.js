@@ -43,7 +43,8 @@ WHERE WalkRequests.status='open';
 });
 
 router.get('/walkers/summary', async (req, res) => {
-  // Comments in query string to help
+  // Comments have been left in the query (created in testing.sql)
+  // to help explain as it's a complicated query
   const firstQuery = `
 SELECT
 -- walker names

@@ -1,6 +1,4 @@
-
-
-    Five users:
+/*     Five users:
         A user with the username alice123, email alice@example.com, password hash hashed123, and role owner.
         A user with the username bobwalker, email bob@example.com, password hash hashed456, and role walker.
         A user with the username carol123, email carol@example.com, password hash hashed789, and role owner.
@@ -12,4 +10,5 @@
     Five walk requests:
         A request for Max at 2025-06-10 08:00:00 for 30 minutes at Parklands, with status open.
         A request for Bella at 2025-06-10 09:30:00 for 45 minutes at Beachside Ave, with status accepted.
-        Three more walk requests with details of your choosing.
+        Three more walk requests with details of your choosing. */
+

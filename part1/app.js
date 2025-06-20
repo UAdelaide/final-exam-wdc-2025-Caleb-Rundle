@@ -30,10 +30,10 @@ app.use((req, res, next) => {
 });
 
 app.use((req, res, next) => {
-  console.log(`${query} -- `);
   req.pool = pool;
   req.sqlQuery = async (query, variables) =>
     new Promise((resolve, reject) => {
+      console.log(`${query} -- ${variables}`);
       pool.query(query, variables, (queryError, results) => {
         if (queryError) {
           reject(queryError);

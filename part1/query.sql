@@ -23,7 +23,7 @@ INSERT INTO Dogs (owner_id, name, size) VALUES
 
 -- You should NOT query by dog name here because dog names are not UNIQUE like with usernames.
 -- I'll use subqueries still as the question specifically requests that, but I'll also include
--- methods as I'm unsure whether the question wants you to recognize this fact or not.
+-- hardcoded examples which I would recommend in this case due to the aforementioned reason.
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES
 -- Subquery Method
 ((SELECT dog_id FROM Dogs WHERE name='Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),

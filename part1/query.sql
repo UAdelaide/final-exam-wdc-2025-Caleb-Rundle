@@ -19,7 +19,7 @@ INSERT INTO Users(username, email, password_hash, role) VALUES
 ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
 ('carol123', 'carol@example.com', 'hashed789', 'owner'),
 ('james123', 'james@example.com', 'hashed101', 'owner'),
-('john123', 'john@example.com', 'hashed112', 'walker');
+('johnwalker', 'john@example.com', 'hashed112', 'walker');
 
 
 SELECT * FROM Users;

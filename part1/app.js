@@ -1,13 +1,13 @@
-const express = require('express');
-const mysql = require('mysql');
+import express from 'express';
+import { createPool } from 'mysql';
 
 const app = express();
 const PORT = 3000;
-const pool = mysql.createPool({
+const pool = createPool({
   host: 'localhost',
   database: 'DogWalkService'
 });
-const apiRouter = require('./routes/api');
+import apiRouter from './routes/api';
 
 // Start server
 

@@ -65,17 +65,17 @@ router.post('/login', async (req, res) => {
     res.status(500).json({ error: 'Login failed' });
   }
 });
-app.get('/logout',
-    (req, res) => {
-        // Destroy session
-        req.session.destroy((err) => {
-            if (err) {
-                console.error(err);
-                res.status(500).send('Error logging out');
-            } else {
-                res.send('Logged out');
-            }
-        });
-    });
+
+router.get('/logout', (req, res) => {
+  // Destroy session
+  req.session.destroy((err) => {
+    if (err) {
+      console.error(err);
+      res.status(500).send('Error logging out');
+    } else {
+      res.send('Logged out');
+    }
+  });
+});
 
 module.exports = router;

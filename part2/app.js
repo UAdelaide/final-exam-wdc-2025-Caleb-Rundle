@@ -8,6 +8,29 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
+let count = 0;
+app.use((req, res, next) => {
+  ++count;
+  const { method, url } = req;
+  console.log(`Request ${count}: ${method} ${url}`);
+  next();
+});
+
+app.use((req, res, next) => {
+  req.pool = pool;
+  req.sqlQuery = async (query, variables) =>
+    new Promise((resolve, reject) => {
+      pool.query(query, variables, (queryError, results) => {
+        if (queryError) {
+          reject(queryError);
+        } else {
+          resolve(results);
+        }
+      });
+    });
+  next();
+});
+
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');

@@ -9,11 +9,11 @@ console.log('Loaded routes/api.js');
 router.get('/dogs', async (req, res) => {
   try {
     const query = await req.sqlQuery(
-      'SELET Dogs.name, Dogs.size, Users.username FROM Dogs \
+      'SELECT Dogs.name, Dogs.size, Users.username FROM Dogs \
     INNER JOIN Users ON Dogs.owner_id=USERS.user_id'
     );
-  } catch (err) {
-    res.status(500).send(err);
+  } catch (queryError) {
+    res.status(500).send(queryError);
   }
   res.status(200).send(query);
 });

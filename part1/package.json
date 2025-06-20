@@ -7,7 +7,6 @@
   "scripts": {
     "start": "node app.js",
     "dev": "vite",
-    "serve": "",
     "build": "vite build",
     "preview": "vite preview"
   },

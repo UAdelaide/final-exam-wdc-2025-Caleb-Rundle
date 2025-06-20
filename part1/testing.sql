@@ -10,4 +10,6 @@ WalkRequests.location,
 Users.username AS owner_username
 FROM
 Dogs
-INNER JOIN
+INNER JOIN Users
+ON Dogs.owner_id=Users.user_id
+WHERE

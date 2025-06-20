@@ -1,1 +1,1 @@
-SELECT Dogs.name FROM
+SELECT Dogs.name, Dogs.size, Users.username FROM 

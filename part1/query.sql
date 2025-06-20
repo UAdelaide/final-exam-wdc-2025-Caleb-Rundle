@@ -16,6 +16,6 @@ INSERT INTO Users (username, email, password_hash, role) VALUES
 ('james123', 'james@example.com', 'hashed101', 'owner'), -- 4
 ('johnwalker', 'john@example.com', 'hashed112', 'walker'); -- 5
 
-INSERT INTO Dogs (name, size)
+INSERT INTO Dogs (owner_id, name, size) 
 
 SELECT * FROM Users;

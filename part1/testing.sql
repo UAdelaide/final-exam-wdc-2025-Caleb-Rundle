@@ -21,6 +21,7 @@ COUNT(*) AS total_ratings,
 AVG(WalkRatings.rating) AS average_rating
 FROM Users
 LEFT JOIN WalkRatings ON Users.user_id=WalkRatings.walker_id
+WHERE Users.role='walker'
 GROUP BY WalkRatings.walker_id;
 
 SELECT COUNT(*) FROM WalkApplications

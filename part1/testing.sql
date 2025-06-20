@@ -22,4 +22,4 @@ INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating) VALUES
 
 SELECT Users.username AS walker_username, COUNT(WalkRatings.rating_id) FROM WalkRatings
 INNER JOIN Users ON Users.user_id=WalkRatings.walker_id
-GROUP BY 
+GROUP BY WalkRatings.walker_id;

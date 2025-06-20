@@ -6,14 +6,13 @@ console.log('Loaded routes/api.js');
 // SELECT Dogs.name, Dogs.size, Users.username FROM Dogs
 // INNER JOIN Users ON Dogs.owner_id=Users.user_id;
 
-router.get('/dogs', (req, res) => {
-    try {
-
-  const query = await req.sqlQuery(
-    'SELECT Dogs.name, Dogs.size, Users.username FROM Dogs \
+router.get('/dogs', async (req, res) => {
+  try {
+    const query = await req.sqlQuery(
+      'SELECT Dogs.name, Dogs.size, Users.username FROM Dogs \
     INNER JOIN Users ON Dogs.owner_id=USERS.user_id'
-  );
-    }
+    );
+  } catch ({}
   res.status(200).send('test');
 });
 

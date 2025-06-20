@@ -20,7 +20,7 @@ INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating) VALUES
 (3, 5, 1, 2);
 */
 
-SELECT * FROM 
+SELECT * FROM WalkRatings;
 
 SELECT
 Users.username AS walker_username,

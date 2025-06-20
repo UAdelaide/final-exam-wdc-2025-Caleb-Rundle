@@ -33,8 +33,9 @@
             ).then((res) => res.json());
             if (status == 'success') {
               this.dog = message;
+              this.message = 'Dog Succeed :D'
             } else {
-              this.message = '';
+              this.message = 'Dog Failed D:';
             }
           }
         }

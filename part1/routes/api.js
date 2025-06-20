@@ -9,7 +9,8 @@ console.log('Loaded routes/api.js');
 router.get('/dogs', async (req, res) => {
   const query = `
 SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username FROM Dogs
-INNER JOIN Users ON Dogs.owner_id=Users.user_id;`;
+INNER JOIN Users ON Dogs.owner_id=Users.user_id;
+`;
 
   try {
     const result = await req.sqlQuery(query);
@@ -31,7 +32,8 @@ Users.username AS owner_username
 FROM WalkRequests
 INNER JOIN Dogs ON Dogs.dog_id=WalkRequests.dog_id
 INNER JOIN Users ON Dogs.owner_id=Users.user_id
-WHERE WalkRequests.status='open';`;
+WHERE WalkRequests.status='open';
+`;
   try {
     const result = await req.sqlQuery(query);
     return res.status(200).send(result);

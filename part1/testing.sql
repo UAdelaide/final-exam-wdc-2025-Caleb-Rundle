@@ -17,7 +17,7 @@ SELECT user_id FROM Users
 WHERE role='walker';
 
 SELECT COUNT(*) FROM WalkRatings
-
+WHERE walker_id=2;
 
 /* SELECT
 Users.username AS walker_username,

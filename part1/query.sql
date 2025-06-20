@@ -12,7 +12,7 @@
         A request for Bella at 2025-06-10 09:30:00 for 45 minutes at Beachside Ave, with status accepted.
         Three more walk requests with details of your choosing. */
 
-
+DELETE * FROM Users;
 
 INSERT INTO Users(username, email, password_hash, role) VALUES
 ('alice123', 'alice@example.com', 'hashed123', 'owner'),

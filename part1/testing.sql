@@ -17,7 +17,7 @@ SELECT * FROM WalkApplications;
 
 SELECT
 Users.username,
-COUNT(WalkRatings.rating_id),
+COUNT(WalkRatings.rating_id) ,
 AVG(WalkRatings.rating),
 COUNT(WalkRequests.request_id)
 FROM Users

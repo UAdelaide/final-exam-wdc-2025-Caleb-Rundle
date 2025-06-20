@@ -15,7 +15,7 @@
     <h1 class="mb-4 text-primary">{{ message }}</h1>
     <p class="lead">Connect with trusted walkers for your beloved dog!</p>
 
-    <form class="col-form-" @submit.prevent="handleLogin">
+    <form class="col-form-label" @submit.prevent="handleLogin">
       <label>Email:
         <input type="email" v-model="email" required>
       </label>

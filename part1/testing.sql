@@ -18,7 +18,7 @@ SELECT * FROM WalkApplications;
 SELECT
 Users.username, COUNT(WalkRatings.rating_id) AVG(WalkRatings.rating), COUNT(WalkRequests.request_id) FROM Users
 LEFT JOIN WalkRatings ON Users.user_id=WalkRatings.walker_id
-;
+LEFT JOIN WalkRequests ON WalkRequests.request_id=WalkApplications.requ;
 
 SELECT
 Users.username AS walker_username,

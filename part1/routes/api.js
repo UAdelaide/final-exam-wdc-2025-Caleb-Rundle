@@ -20,8 +20,7 @@ router.get('/dogs', async (req, res) => {
 });
 
 router.get('walkrequests/open', async (req, res) => {
-    const query =
-
+  const query = `
 SELECT
 WalkRequests.request_id,
 Dogs.name as dog_name,
@@ -33,9 +32,7 @@ FROM WalkRequests
 INNER JOIN Dogs ON Dogs.dog_id=WalkRequests.dog_id
 INNER JOIN Users ON Dogs.owner_id=Users.user_id
 WHERE WalkRequests.status='open';
-
-    'SELECT WalkRequests.request_id AS request_id, Dogs.name AS dog_name, \
-    Walk'
+`;
 });
 
 module.exports = router;

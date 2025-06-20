@@ -29,6 +29,13 @@ INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, st
 (1, '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
 (2, '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted');
 
+INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating) VALUES
+(1, 2, 1, 5),
+(2, 2, 1, 4),
+(3, 5, 1, 2);
+
+INSERT INTO WalkApplications (request_id, walker_id) VALUES (1, 2), (2, 2), (3, 5);
+
 -- Just for viewing - no insertions are done here
 SELECT * FROM Users;
 SELECT * FROM Dogs;

@@ -13,7 +13,7 @@ INNER JOIN Dogs ON Dogs.dog_id=WalkRequests.dog_id
 INNER JOIN Users ON Dogs.owner_id=Users.user_id
 WHERE WalkRequests.status='open';
 
-INSERT INTO WalkApplications (request_id, walker_id)
+INSERT INTO WalkApplications (request_id, walker_id,)
 /*
 INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating) VALUES
 (1, 2, 1, 5),

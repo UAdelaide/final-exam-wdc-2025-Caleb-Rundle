@@ -27,10 +27,9 @@ CREATE TABLE WalkRatings (
     CONSTRAINT unique_rating_per_walk UNIQUE (request_id)
 );
 
-INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments) VALUES
+INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating) VALUES
 (1, 2, 1, 3),
 (2, 2, 1, 4),
-(3, 5, 1, 3),
+(3, 5, 1, 3);
 
-SELECT
-Users.username as walker_username,
+SELECT * FROM WalkRatings;

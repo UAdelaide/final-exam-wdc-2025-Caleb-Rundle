@@ -62,8 +62,10 @@ AND WalkRequests.status='completed'
 WHERE Users.role='walker'
 GROUP BY WalkApplications.walker_id, Users.username;
 `;
+  let firstResult;
+  let secondResult;
   try {
-    const result = await req.sqlQuery(firstQuery);
+    const firstResult = await req.sqlQuery(firstQuery);
     return res.status(200).send(result);
   } catch (queryError) {
     return res.status(500).send(queryError);

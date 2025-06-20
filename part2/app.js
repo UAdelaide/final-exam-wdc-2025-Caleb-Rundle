@@ -7,6 +7,7 @@ const app = express();
 
 // Middleware
 
+// For session management
 app.use(
   session({
     secret: 'change-in-production',

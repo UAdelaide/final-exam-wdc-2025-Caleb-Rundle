@@ -23,7 +23,7 @@ AVG(WalkRatings.rating) AS average_rating,
     INNER JOIN WalkRequests on WalkRequests.request_id=WalkApplications.request_id
     WHERE WalkRequests.status='completed'
     GROUP BY WalkApplications.walker_id;
-) AS 
+) AS completed_walks
 FROM WalkRatings
 INNER JOIN Users ON Users.user_id=WalkRatings.walker_id
 GROUP BY WalkRatings.walker_id;

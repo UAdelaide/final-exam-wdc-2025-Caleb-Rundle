@@ -34,7 +34,7 @@ INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating) VALUES
 (2, 2, 1, 4),
 (3, 5, 1, 2);
 
-INSERT INTO WalkApplications (request_id, walker_id) VALUES (1, 2), (2, 2), (7, 5);
+INSERT INTO WalkApplications (request_id, walker_id) VALUES (1, 2), (5, 2), (7, 5);
 
 -- Just for viewing - no insertions are done here
 SELECT * FROM Users;

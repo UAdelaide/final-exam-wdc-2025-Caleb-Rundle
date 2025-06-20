@@ -19,6 +19,8 @@ router.get('/dogs', async (req, res) => {
   }
 });
 
-router.get('walkrequests/open', async (req, res) => {});
+router.get('walkrequests/open', async (req, res) => {
+    const query = 'SELECT '
+});
 
 module.exports = router;

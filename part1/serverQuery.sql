@@ -1,1 +1,1 @@
-SELECT * FROM 
+SELECT Dogs.name FROM

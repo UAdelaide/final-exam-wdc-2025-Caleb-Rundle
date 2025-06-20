@@ -2,7 +2,7 @@ const express = require('express');
 
 const app = express();
 const PORT = 3000;
-const pool = 
+const pool = mysql
 
 app.listen(PORT, (error) => {
   if (!error) {

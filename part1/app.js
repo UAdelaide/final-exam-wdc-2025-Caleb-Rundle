@@ -21,8 +21,9 @@ app.listen(PORT, (error) => {
 
 // Define middleware
 
-static let count = 0;
+let count = 0;
 app.use((req, res, next) => {
+    
   const { method, url } = req;
   console.log(method + ' ' + url);
 });

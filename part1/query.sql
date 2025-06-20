@@ -24,7 +24,7 @@ INSERT INTO Dogs (owner_id, name, size) VALUES
 -- methods as I'm unsure whether the question wants you to recognize this fact or not.
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES
 -- Subquery Method
-((SELECT dog_id FROM Dogs WHERE name='Max'))
+((SELECT dog_id FROM Dogs WHERE name='Max'), '2025-06-10')
 -- Hardcoded (as dog names are not unique)
 
 SELECT * FROM Users;

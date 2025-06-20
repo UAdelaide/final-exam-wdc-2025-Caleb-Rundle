@@ -62,7 +62,7 @@
           if (response.status === 200) {
             const data = await response.json();
             if (data.user.role == 'owner') {
-              
+              window.location.href = 'owner-dashboard.html';
             }
             console.log(data.user);
             return;

@@ -70,10 +70,9 @@
             }
             this.errorMessage = 'Account is invalid!';
             return;
-          } else {
-            this.errorMessage = 'Invalid email or password.';
-            return;
           }
+          this.errorMessage = 'Invalid email or password.';
+          return;
         },
         goToRegister() {
           window.location.href = '/register-page';

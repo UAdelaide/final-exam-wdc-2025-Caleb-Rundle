@@ -20,8 +20,8 @@ INSERT INTO Dogs (owner_id, name, size) VALUES
 ((SELECT user_id FROM Users WHERE username='james123'), 'John Lick', 'large');
 
 -- You should NOT query by dog name here because dog names are not UNIQUE like with usernames.
--- I'll hardcode 2 requests and use subqueries for the rest to demonstrate though as I believe
--- that's what the question wants here still.
+-- I'll hardcode 2 requests and use subqueries for the rest to demonstrate knowledge of both
+-- methods
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES
 ()
 

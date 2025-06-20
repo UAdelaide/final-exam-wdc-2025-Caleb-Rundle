@@ -16,9 +16,13 @@ app.use((req, res, next) => {
     req.sqlQuery = async (query, variables) => {
         new Promise((resolve, reject) => {
             pool.query(query, variables, (queryError, results) => {
-                if (queryError)
-            })
-        })
+                if (queryError) {
+                    reject(queryError);
+                } else {
+                    resolve(results);
+                }
+            });
+        });
     }
 })
 

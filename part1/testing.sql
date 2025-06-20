@@ -20,6 +20,8 @@ INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating) VALUES
 (3, 5, 1, 2);
 */
 
+SELECT * FROM 
+
 SELECT
 Users.username AS walker_username,
 COUNT(WalkRatings.rating_id) AS total_ratings,

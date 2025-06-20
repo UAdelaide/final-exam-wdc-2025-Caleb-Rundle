@@ -22,7 +22,7 @@ AVG(WalkRatings.rating) AS average_rating
 FROM Users
 LEFT JOIN WalkRatings ON Users.user_id=WalkRatings.walker_id
 WHERE Users.role='walker'
-GROUP BY WalkRatings.walker_id;
+GROUP BY WalkRatings.walker_id, Users.username;
 
 SELECT COUNT(*) FROM WalkApplications
 INNER JOIN WalkRequests on WalkRequests.request_id=WalkApplications.request_id

@@ -130,7 +130,8 @@
           }
         }
 
-        onMounted(() => {
+        onMounted(async () => {
+          await checkSession();
           loadWalks();
         });
 

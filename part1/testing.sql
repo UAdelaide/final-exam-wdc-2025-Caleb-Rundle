@@ -13,7 +13,6 @@ INNER JOIN Dogs ON Dogs.dog_id=WalkRequests.dog_id
 INNER JOIN Users ON Dogs.owner_id=Users.user_id
 WHERE WalkRequests.status='open';
 
-INSERT INTO WalkApplications (request_id, walker_id,)
 /*
 INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating) VALUES
 (1, 2, 1, 5),
@@ -25,7 +24,7 @@ SELECT
 Users.username AS walker_username,
 COUNT(WalkRatings.rating_id) AS total_ratings,
 AVERAGE(WalkRatings.rating_id) as average_rating,
-()
+(SELECT * FROM )
 FROM WalkRatings
 INNER JOIN Users ON Users.user_id=WalkRatings.walker_id
 GROUP BY WalkRatings.walker_id;

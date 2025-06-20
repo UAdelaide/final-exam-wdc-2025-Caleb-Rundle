@@ -1,5 +1,5 @@
-const express = require('express');
-const router = express.Router();
+import { Router } from 'express';
+const router = Router();
 
 console.log('Loaded routes/api.js');
 
@@ -78,4 +78,4 @@ GROUP BY Users.user_id;
   }
 });
 
-module.exports = router;
+export default router;

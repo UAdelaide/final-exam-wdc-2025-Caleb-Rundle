@@ -74,7 +74,7 @@ GROUP BY WalkApplications.walker_id, Users.username;
   } catch (queryError) {
     return res.status(500).send(queryError);
   }
-  res.send(firs)
+  res.send(firstResult, secondResult);
 });
 
 module.exports = router;

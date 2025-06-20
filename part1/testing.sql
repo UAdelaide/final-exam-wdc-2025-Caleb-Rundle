@@ -34,4 +34,5 @@ GROUP BY WalkRatings.walker_id;
 
 SELECT COUNT(*) FROM WalkRequests
 INNER JOIN WalkApplications on WalkRequests.request_id=WalkRequests.request_id
-GROUP BY 
+WHERE WalkRequests.status=
+GROUP BY

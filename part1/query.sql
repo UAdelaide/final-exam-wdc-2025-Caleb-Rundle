@@ -1,8 +1,4 @@
 /*
-    Five dogs:
-        A dog named Max, who is medium-sized and owned by alice123.
-        A dog named Bella, who is small and owned by carol123.
-        Three more dogs with details of your choosing.
     Five walk requests:
         A request for Max at 2025-06-10 08:00:00 for 30 minutes at Parklands, with status open.
         A request for Bella at 2025-06-10 09:30:00 for 45 minutes at Beachside Ave, with status accepted.
@@ -22,6 +18,8 @@ INSERT INTO Dogs (owner_id, name, size) VALUES
 ((SELECT user_id FROM Users WHERE username='alice123'), 'Max Junior', 'small'),
 ((SELECT user_id FROM Users WHERE username='alice123'), 'Max Senior', 'large'),
 ((SELECT user_id FROM Users WHERE username='james123'), 'John Lick', 'large');
+
+INSERT INTO Requests
 
 SELECT * FROM Users;
 SELECT * FROM Dogs;

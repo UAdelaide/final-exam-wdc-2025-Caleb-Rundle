@@ -23,6 +23,7 @@ COUNT(DISTINCT WalkRatings.rating_id) AS total_ratings,
 AVG(WalkRatings.rating) AS average_rating,
 -- count complete walks
 COUNT(DISTINCT WalkRequests.request_id) AS completed_walks
+-- 
 FROM Users
 -- join with walk ratings, but maintain all users found
 LEFT JOIN WalkRatings ON Users.user_id=WalkRatings.walker_id
@@ -34,6 +35,7 @@ LEFT JOIN WalkRequests ON WalkRequests.request_id=WalkApplications.request_id
 AND WalkRequests.status='completed'
 -- only grab matches with walkers
 WHERE Users.role='walker'
+-- group results by
 GROUP BY WalkRatings.walker_id, Users.username;
 
 /* SELECT

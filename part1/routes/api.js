@@ -4,9 +4,7 @@ const router = express.Router();
 console.log('Loaded routes/api.js');
 
 router.get('/dogs', (req, res) => {
-  console.log('dogs');
-  res.send('hi');
-  res.sendStatus(200);
+  res.status(500).send('test');
 });
 
 module.exports = router;

@@ -58,8 +58,9 @@
               password: this.password
             })
           });
+
           if (status === 200) {
-            this.message = user;
+            console.log(user)
             return;
           } else {
             this.errorMessage = 'Invalid email or password.';

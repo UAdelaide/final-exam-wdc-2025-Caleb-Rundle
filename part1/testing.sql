@@ -27,6 +27,4 @@ AVERAGE(WalkRatings.rating_id) as average_rating,
 COUNT(WalkRequests.request_id)
 FROM WalkRatings
 INNER JOIN Users ON Users.user_id=WalkRatings.walker_id
-INNER JOIN WalkRequests ON WalkRequests.request_id = WalkRatings.request_id
-WHERE 
 GROUP BY WalkRatings.walker_id;

@@ -26,6 +26,7 @@ app.use((req, res, next) => {
   ++count;
   const { method, url } = req;
   console.log(`Request ${count}: ${method} ${url}`);
+  next();
 });
 
 app.use((req, res, next) => {

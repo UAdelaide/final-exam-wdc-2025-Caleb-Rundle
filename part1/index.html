@@ -10,6 +10,10 @@
 
     <div id="app">
       <button type="button" @click="getDog">Get Dog!</button>
+
+      <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
+
+      <p v-else=""
     </div>
 
     <script>

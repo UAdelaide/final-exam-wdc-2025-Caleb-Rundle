@@ -25,6 +25,7 @@ INSERT INTO Dogs (owner_id, name, size) VALUES
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES
 -- Subquery Method
 ((SELECT ))
+-- Hardcoded (as dog names are not unique)
 
 SELECT * FROM Users;
 SELECT * FROM Dogs;

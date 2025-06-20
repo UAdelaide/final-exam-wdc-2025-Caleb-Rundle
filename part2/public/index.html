@@ -63,7 +63,10 @@
             const data = await response.json();
             if (data.user.role == 'owner') {
               window.location.href = 'owner-dashboard.html';
+              return;
             }
+            if (data.user.role == '')
+
             console.log(data.user);
             return;
           } else {

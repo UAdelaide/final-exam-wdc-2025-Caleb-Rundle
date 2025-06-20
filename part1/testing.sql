@@ -36,7 +36,7 @@ AND WalkRequests.status='completed'
 -- only grab matches with walkers
 WHERE Users.role='walker'
 -- group results by name
-GROUP BY Users.username;
+GROUP BY Users.user_id;
 
 /* SELECT
 Users.username AS walker_username,

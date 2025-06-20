@@ -97,8 +97,8 @@
         async function checkSession() {
           try {
             const res = await fetch('/api/users/me');
-            if (res.status == 200) {
-              u
+            if (res.status != 200) {
+              
             }
           }
         }

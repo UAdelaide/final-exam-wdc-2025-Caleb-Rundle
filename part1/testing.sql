@@ -28,7 +28,7 @@ AND WalkRequests.status='completed'
 WHERE Users.role='walker'
 GROUP BY WalkRatings.walker_id, Users.username;
 
-SELECT
+/* SELECT
 Users.username AS walker_username,
 COUNT(WalkRatings.rating_id) AS total_ratings,
 AVG(WalkRatings.rating) AS average_rating
@@ -43,4 +43,4 @@ LEFT JOIN WalkRequests ON WalkRequests.request_id=WalkApplications.request_id
 AND WalkRequests.status='completed'
 WHERE Users.role='walker'
 GROUP BY WalkApplications.walker_id, Users.username;
-
+ */

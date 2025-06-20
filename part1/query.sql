@@ -17,8 +17,8 @@ INSERT INTO Dogs (owner_id, name, size) VALUES
 ((SELECT user_id FROM Users WHERE username='carol123'), 'Bella', 'small'),
 ((SELECT user_id FROM Users WHERE username='alice123'), 'Max Junior', 'small'),
 ((SELECT user_id FROM Users WHERE username='alice123'), 'Max Senior', 'large'),
-((SELECT user_id FROM Users WHERE username='james123'), 'John Lick', 'large'),
-((SELECT user_id FROM Users WHERE username='james123'), 'Max', 'large');
+((SELECT user_id FROM Users WHERE username='james123'), 'John Lick', 'large');
+-- ((SELECT user_id FROM Users WHERE username='james123'), 'Max', 'large');
 
 -- You should NOT query by dog name here because dog names are not UNIQUE like with usernames.
 -- I'll hardcode 2 requests and use subqueries for the rest to demonstrate knowledge of both

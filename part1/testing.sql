@@ -27,9 +27,6 @@ CREATE TABLE WalkRatings (
     CONSTRAINT unique_rating_per_walk UNIQUE (request_id)
 );
 
--- request_id -> dog_id > user_id
--- user_id
-
 INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments) VALUES
 (1, 2, ),
 (2, 2),

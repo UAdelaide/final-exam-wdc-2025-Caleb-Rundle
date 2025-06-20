@@ -20,8 +20,9 @@ SELECT COUNT(*) FROM WalkRatings
 WHERE walker_id=2;
 
 SELECT COUNT(*) FROM WalkApplications
-INNER
-WHERE WalkRequests.status='completed';
+INNER JOIN WalkRequests on WalkRequests.request_id=WalkApplications.request_id
+WHERE WalkRequests.status='completed'
+GROUP BY WalkApplications.walker_id;
 
 /* SELECT
 Users.username AS walker_username,

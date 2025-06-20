@@ -26,9 +26,11 @@ COUNT(DISTINCT WalkRequests.request_id) AS completed_walks
 FROM Users
 -- join with walk ratings, but maintain all users found
 LEFT JOIN WalkRatings ON Users.user_id=WalkRatings.walker_id
--- join with walk applications but maintain all
+-- join with walk applications but maintain all users found
 LEFT JOIN WalkApplications ON WalkApplications.walker_id=Users.user_id
+-- join with walk requests but maintain all users found
 LEFT JOIN WalkRequests ON WalkRequests.request_id=WalkApplications.request_id
+-- only look at requests that are completed
 AND WalkRequests.status='completed'
 WHERE Users.role='walker'
 GROUP BY WalkRatings.walker_id, Users.username;

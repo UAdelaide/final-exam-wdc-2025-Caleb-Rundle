@@ -13,7 +13,8 @@ INNER JOIN Dogs ON Dogs.dog_id=WalkRequests.dog_id
 INNER JOIN Users ON Dogs.owner_id=Users.user_id
 WHERE WalkRequests.status='open';
 
-SELECT 
+SELECT user_id FROM Users
+WHERE role='walker';
 
 SELECT
 Users.username AS walker_username,

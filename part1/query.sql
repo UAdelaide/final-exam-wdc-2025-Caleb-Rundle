@@ -33,7 +33,7 @@ INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, st
 ((SELECT dog_id FROM Dogs WHERE name='Max'), '2025-07-10 08:00:00', 30, 'Parklands', 'open'),
 -- Hardcoded (as dog names are not unique)
 (1, '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
-(2, '2025-0-10 08:00:00', 30, 'Parklands', 'open');
+(2, '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted');
 
 SELECT * FROM Users;
 SELECT * FROM Dogs;

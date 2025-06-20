@@ -16,6 +16,7 @@
 SELECT * FROM WalkApplications;
 
 SELECT
+-- walker names
 Users.username AS walker_username,
 -- count ratings
 COUNT(DISTINCT WalkRatings.rating_id) AS total_ratings,

@@ -97,6 +97,7 @@
         async function logout() {
           try {
             const res = await fetch('/api/users/logout');
+            localStorage.clear();
           } catch (err) {
             error.value = 'Failed to log out';
           }

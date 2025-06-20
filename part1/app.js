@@ -3,7 +3,10 @@ const mysql = require('mysql');
 
 const app = express();
 const PORT = 3000;
-const pool = mysql.createPool()
+const pool = mysql.createPool({
+    host: 'localhost',
+    
+})
 
 app.listen(PORT, (error) => {
   if (!error) {

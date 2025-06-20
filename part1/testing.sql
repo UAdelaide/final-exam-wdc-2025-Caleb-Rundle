@@ -9,5 +9,5 @@ WalkRequests.duration_minutes,
 WalkRequests.location,
 Users.username AS owner_username
 FROM WalkRequests
-INNER JOIN Dogs Dogs.owner_id=Users.user_id
+INNER JOIN Dogs Dogs.dog_id=WalkRequests.dog_id
 WHERE WalkRequests.status='open';

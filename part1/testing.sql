@@ -13,21 +13,9 @@
 -- INNER JOIN Users ON Dogs.owner_id=Users.user_id
 -- WHERE WalkRequests.status='open';
 
-SELECT user_id FROM Users
-WHERE role='walker';
-
-
-SELECT COUNT(*) FROM WalkRatings
-WHERE walker_id=2;
-
-SELECT COUNT(*) FROM WalkApplications
-INNER JOIN WalkRequests on WalkRequests.request_id=WalkApplications.request_id
-WHERE WalkRequests.status='completed'
-AND WalkApplications.walker_id=2;
 
 SELECT * FROM WalkApplications;
 
-/* SELECT
 Users.username AS walker_username,
 COUNT(*) AS total_ratings,
 AVG(WalkRatings.rating) AS average_rating
@@ -38,4 +26,4 @@ GROUP BY WalkRatings.walker_id;
 SELECT COUNT(*) FROM WalkApplications
 INNER JOIN WalkRequests on WalkRequests.request_id=WalkApplications.request_id
 WHERE WalkRequests.status='completed'
-GROUP BY WalkApplications.walker_id; */
+GROUP BY WalkApplications.walker_id;

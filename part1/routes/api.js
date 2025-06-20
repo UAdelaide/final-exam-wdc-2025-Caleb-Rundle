@@ -12,7 +12,7 @@ router.get('/dogs', async (req, res) => {
       'SELECT Dogs.name, Dogs.size, Users.username FROM Dogs \
     INNER JOIN Users ON Dogs.owner_id=USERS.user_id'
     );
-  } catch ({}
+  } catch (queryError){}
   res.status(200).send('test');
 });
 

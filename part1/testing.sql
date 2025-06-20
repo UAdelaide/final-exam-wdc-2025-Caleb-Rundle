@@ -24,7 +24,7 @@ SELECT * FROM WalkRatings;
 
 SELECT
 Users.username AS walker_username,
-COUNT(WalkRatings.rating_id) AS total_ratings,
+COUNT(*) AS total_ratings,
 AVG(WalkRatings.rating) as average_rating
 FROM WalkRatings
 INNER JOIN Users ON Users.user_id=WalkRatings.walker_id

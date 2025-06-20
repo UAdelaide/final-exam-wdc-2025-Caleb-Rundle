@@ -13,7 +13,9 @@ app.listen(PORT, (error) => {
 
 app.use((req, res, next) => {
     req.pool = pool;
-    req.query()
+    req.sqlQuery = async (query, variables) => {
+        pool.query
+    }
 })
 
 const apiRouter = require('./routes/api');

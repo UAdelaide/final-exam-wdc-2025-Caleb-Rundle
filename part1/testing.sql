@@ -32,7 +32,7 @@ FROM WalkRatings
 INNER JOIN Users ON Users.user_id=WalkRatings.walker_id
 GROUP BY WalkRatings.walker_id;
 
-SELECT COUNT(*) FROM WalkRequests
+SELECT COUNT(*) FROM WalkApplications
 INNER JOIN WalkApplications on WalkApplications.request_id=WalkRequests.request_id
 WHERE WalkRequests.status='completed'
-GROUP BY WalkRequests
+GROUP BY WalkApplications.walker_id;

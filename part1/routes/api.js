@@ -36,6 +36,7 @@ INNER JOIN Users ON Dogs.owner_id=Users.user_id
 WHERE WalkRequests.status='open';
 `;
   try {
+    // req.sqlQuery is defined in app.js middleware!
     const result = await req.sqlQuery(query);
     return res.status(200).send(result);
   } catch (queryError) {
@@ -72,6 +73,7 @@ WHERE Users.role='walker'
 GROUP BY Users.user_id;
 `;
   try {
+    // req.sqlQuery is defined in app.js middleware!
     const result = await req.sqlQuery(query);
     return res.status(200).send(result);
   } catch (queryError) {

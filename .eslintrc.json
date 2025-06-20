@@ -338,7 +338,7 @@
     "id-length": [ "off" ],
     "id-match": [ "off" ],
     "implicit-arrow-linebreak": [
-      "warn",
+      "off",
       "beside"
     ],
     "key-spacing": [

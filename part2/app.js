@@ -19,6 +19,7 @@ app.use(
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
+// Display requests for debugging
 let count = 0;
 app.use((req, res, next) => {
   ++count;

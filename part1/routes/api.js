@@ -33,6 +33,12 @@ INNER JOIN Dogs ON Dogs.dog_id=WalkRequests.dog_id
 INNER JOIN Users ON Dogs.owner_id=Users.user_id
 WHERE WalkRequests.status='open';
 `;
+  try {
+    const result = await req.sqlQuery(query, 'name');
+    return res.status(200).send(result);
+  } catch (queryError) {
+    return res.status(500).send(queryError);
+  }
 });
 
 module.exports = router;

@@ -28,7 +28,7 @@ CREATE TABLE WalkRatings (
 );
 
 -- request_id -> dog_id -> user_id
--- 
+-- user_id
 
 INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments) VALUES
 (1, 2, ),

@@ -62,6 +62,18 @@ AND WalkRequests.status='completed'
 WHERE Users.role='walker'
 GROUP BY WalkApplications.walker_id, Users.username;
 `;
+  try {
+    const result = await req.sqlQuery(query);
+    return res.status(200).send(result);
+  } catch (queryError) {
+    return res.status(500).send(queryError);
+  }
+  try {
+    const result = await req.sqlQuery(query);
+    return res.status(200).send(result);
+  } catch (queryError) {
+    return res.status(500).send(queryError);
+  }
 });
 
 module.exports = router;

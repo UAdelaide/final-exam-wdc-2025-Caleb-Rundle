@@ -16,7 +16,7 @@ WHERE WalkRequests.status='open';
 SELECT user_id FROM Users
 WHERE role='walker';
 
-
+SELECT COUNT(*) FROM 
 
 /* SELECT
 Users.username AS walker_username,

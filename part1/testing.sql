@@ -21,6 +21,8 @@ WHERE walker_id IN
     WHERE role='walker'
 );
 
+
+
 /* SELECT
 Users.username AS walker_username,
 COUNT(*) AS total_ratings,

@@ -95,7 +95,10 @@
         }
 
         async function checkSession() {
-          try 
+          try {
+            const res = await fetch('/api/users/me');
+            if (res.s)
+          }
         }
 
         async function logout() {

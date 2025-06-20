@@ -1,9 +1,9 @@
--- SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username FROM Dogs
--- INNER JOIN Users ON Dogs.owner_id=Users.user_id;
+SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username FROM Dogs
+INNER JOIN Users ON Dogs.owner_id=Users.user_id;
 
--- SELECT
--- WalkRequests.request_id,
--- Dogs.name as dog_name,
+SELECT
+WalkRequests.request_id,
+Dogs.name as dog_name,
 WalkRequests.requested_time,
 WalkRequests.duration_minutes,
 WalkRequests.location,
@@ -13,7 +13,7 @@ INNER JOIN Dogs ON Dogs.dog_id=WalkRequests.dog_id
 INNER JOIN Users ON Dogs.owner_id=Users.user_id
 WHERE WalkRequests.status='open';
 
-SELECT * FROM WalkApplications;
+-- SELECT * FROM WalkApplications;
 
 SELECT
 -- walker names

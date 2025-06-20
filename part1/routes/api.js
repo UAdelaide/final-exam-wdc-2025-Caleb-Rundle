@@ -71,16 +71,11 @@ WHERE Users.role='walker'
 GROUP BY Users.user_id;
 `;
   try {
-    firstResult = await req.sqlQuery(firstQuery);
+    const result = await req.sqlQuery(query);
+    return res.status(200).send(result);
   } catch (queryError) {
     return res.status(500).send(queryError);
   }
-  try {
-    secondResult = await req.sqlQuery(secondQuery);
-  } catch (queryError) {
-    return res.status(500).send(queryError);
-  }
-  res.send(secondResult);
 });
 
 module.exports = router;

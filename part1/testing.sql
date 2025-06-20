@@ -13,7 +13,6 @@
 -- INNER JOIN Users ON Dogs.owner_id=Users.user_id
 -- WHERE WalkRequests.status='open';
 
-
 SELECT * FROM WalkApplications;
 
 Users.username AS walker_username,

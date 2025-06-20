@@ -73,7 +73,7 @@ router.get('/logout', (req, res) => {
       console.error(err);
       res.status(500).send('Error logging out');
     } else {
-      res.send('Logged out');
+      res.status(200).send('Logged out');
     }
   });
 });

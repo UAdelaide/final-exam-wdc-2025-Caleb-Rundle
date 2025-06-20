@@ -25,9 +25,9 @@ INSERT INTO Dogs (owner_id, name, size) VALUES
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES
 -- Subquery Method
 ((SELECT dog_id FROM Dogs WHERE name='Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
-((SELECT dog_id FROM Dogs WHERE name='Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'open'),
+((SELECT dog_id FROM Dogs WHERE name='Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
 ((SELECT dog_id FROM Dogs WHERE name='John Lick'), '2025-06-10 00:00:00', 30, 'Shadowlands', 'open'),
-((SELECT dog_id FROM Dogs WHERE name='Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
+((SELECT dog_id FROM Dogs WHERE name='John Lick'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
 ((SELECT dog_id FROM Dogs WHERE name='Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open');
 -- Hardcoded (as dog names are not unique)
 

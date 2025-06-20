@@ -16,6 +16,8 @@ WHERE WalkRequests.status='open';
 SELECT user_id FROM Users
 WHERE role='walker';
 
+SELECT 
+
 /* SELECT
 Users.username AS walker_username,
 COUNT(*) AS total_ratings,

@@ -23,7 +23,7 @@ COUNT(DISTINCT WalkRatings.rating_id) AS total_ratings,
 AVG(WalkRatings.rating) AS average_rating,
 -- count complete walks
 COUNT(DISTINCT WalkRequests.request_id) AS completed_walks
--- 
+-- Users is our LEFT
 FROM Users
 -- join with walk ratings, but maintain all users found
 LEFT JOIN WalkRatings ON Users.user_id=WalkRatings.walker_id

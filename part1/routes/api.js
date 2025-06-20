@@ -65,17 +65,16 @@ GROUP BY WalkApplications.walker_id, Users.username;
   let firstResult;
   let secondResult;
   try {
-    const firstResult = await req.sqlQuery(firstQuery);
-    return res.status(200).send(result);
+    firstResult = await req.sqlQuery(firstQuery);
   } catch (queryError) {
     return res.status(500).send(queryError);
   }
   try {
-    const result = await req.sqlQuery(query);
-    return res.status(200).send(result);
+    secondResult = await req.sqlQuery(query);
   } catch (queryError) {
     return res.status(500).send(queryError);
   }
+  res.send(firs)
 });
 
 module.exports = router;

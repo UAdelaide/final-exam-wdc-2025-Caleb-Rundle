@@ -2,7 +2,7 @@ SELECT Dogs.name AS 'dog_name', Dogs.size AS 'size', Users.username AS 'owner_us
 INNER JOIN Users ON Dogs.owner_id=Users.user_id;
 
 SELECT
-WWalkRequests.request_id,
+WalkRequests.request_id,
 Dogs.name as dog_name,
 WalkRequests.requested_time,
 WalkRequests.duration_minutes,

@@ -60,7 +60,7 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.user = rows[0];
-    
+    return res.status(200).send()
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
   }

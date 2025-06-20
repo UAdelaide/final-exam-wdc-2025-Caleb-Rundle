@@ -7,4 +7,7 @@ app.listen(PORT, (error) => {
     if(!error) {
         console.log('Server running on port ' + PORT);
     }
+    else {
+        console.log('Error occured, serve')
+    }
 })

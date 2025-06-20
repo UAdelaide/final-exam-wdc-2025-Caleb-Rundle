@@ -24,53 +24,15 @@
         },
         methods: {
           async getDog() {
-            const {message, status} = await fetch('https://dog.ceo/api/breeds/image/random');
-
+            const { message, status } = await fetch(
+              'https://dog.ceo/api/breeds/image/random'
+            );
             if (status == 200) {
               this.dog = message;
-            }
-            else {
-              this.errorMessage = 'Dog Failed D:';
-              return;
-            }
-          }
-          async handleLogin() {
-            if (!this.email || !this.password) {
-              this.errorMessage = 'Please enter both email and password.';
-              return;
-            }
-            const { status } = await fetch('/login', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify({
-                email: this.email,
-                password: this.password
-              })
-            });
-            if (status === 200) {
-              window.location.href = '/user/home';
-              return;
             } else {
-              this.errorMessage = 'Invalid email or password.';
-              return;
+              this.errorMessage = 'Dog Failed D:';
             }
-          },
-          goToRegister() {
-            window.location.href = '/register-page';
           }
-        },
-        mounted() {
-          const isDark = localStorage.getItem('theme') === 'dark';
-          document.body.classList.toggle('dark-mode', isDark);
-          const toggleBtn = document.getElementById('themeToggle');
-          toggleBtn.innerText = isDark ? '☀️ Light' : '🌙 Dark';
-          toggleBtn.addEventListener('click', () => {
-            const isNowDark = document.body.classList.toggle('dark-mode');
-            localStorage.setItem('theme', isNowDark ? 'dark' : 'light');
-            toggleBtn.innerText = isNowDark ? '☀️ Light' : '🌙 Dark';
-          });
         }
       }).mount('#app');
     </script>

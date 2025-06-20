@@ -20,7 +20,9 @@ INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating) VALUES
 (3, 5, 1, 2);
 */
 
-INSERT INTO WalkApplications
+INSERT INTO WalkApplications (request_id, walker_id) VALUES
+(1, 2),
+(2, 2)
 
 SELECT * FROM WalkRatings;
 

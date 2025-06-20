@@ -7,6 +7,7 @@ const pool = mysql.createPool({
   host: 'localhost',
   database: 'DogWalkService'
 });
+const apiRouter = require('./routes/api');
 
 app.listen(PORT, (error) => {
   if (!error) {
@@ -30,7 +31,5 @@ app.use((req, res, next) => {
     });
   next();
 });
-
-const apiRouter = require('./routes/api');
 
 app.use('/api', apiRouter);

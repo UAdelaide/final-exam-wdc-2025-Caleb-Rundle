@@ -98,6 +98,7 @@
           try {
             const res = await fetch('/api/users/logout');
             localStorage.clear();
+            window.location.href = '/';
           } catch (err) {
             error.value = 'Failed to log out';
           }

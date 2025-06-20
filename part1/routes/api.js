@@ -20,7 +20,7 @@ INNER JOIN Users ON Dogs.owner_id=Users.user_id;
   }
 });
 
-router.get('walkrequests/open', async (req, res) => {
+router.get('/walkrequests/open', async (req, res) => {
   const query = `
 SELECT
 WalkRequests.request_id,

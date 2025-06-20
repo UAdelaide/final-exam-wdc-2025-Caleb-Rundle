@@ -52,7 +52,7 @@ Users.username AS walker_username,
 -- count ratings
 COUNT(DISTINCT WalkRatings.rating_id) AS total_ratings,
 -- average ratings
-IFNULL(AVG(WalkRatings.rating), 0) AS average_rating,
+AVG(WalkRatings.rating AS average_rating,
 -- count complete walks
 COUNT(DISTINCT WalkRequests.request_id) AS completed_walks
 -- Users is our LEFT

@@ -15,6 +15,12 @@
     <p>{{ message }}</p>
 
     <img v-if="dog" :src="dog" alt="random dog">
+
+    <button type="button" @click="getDog">Get Dog!</button>
+
+    <p>{{ message }}</p>
+
+    <img v-if="dog" :src="dog" alt="random dog">
   </div>
 
   <script>

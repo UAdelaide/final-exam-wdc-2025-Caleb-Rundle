@@ -1,12 +1,9 @@
 {
-    "extends": ["html-validate:standard"],
- {
--  "extends": ["html-validate:recommended"],
-+  "plugins": ["html-validate-vue"],
-+  "extends": ["html-validate:recommended", "html-validate-vue:recommended"],
-+  "transform": {
-+    "^.*\\.vue$": "html-validate-vue"
-+  }
+  "extends": ["html-validate:recommended"],
+  "plugins": ["html-validate-vue"],
+  "extends": ["html-validate:recommended", "html-validate-vue:recommended"],
+  "transform": {
+    "^.*\\.vue$": "html-validate-vue"}
  }
     "rules": {
         "doctype-style": "error",

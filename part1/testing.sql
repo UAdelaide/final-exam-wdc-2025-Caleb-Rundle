@@ -15,7 +15,7 @@
 
 SELECT * FROM WalkApplications;
 
-SELECT FROM 
+SELECT
 Users.username AS walker_username,
 COUNT(*) AS total_ratings,
 AVG(WalkRatings.rating) AS average_rating

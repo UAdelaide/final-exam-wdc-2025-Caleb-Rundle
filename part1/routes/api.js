@@ -21,7 +21,7 @@ router.get('/dogs', async (req, res) => {
 
 router.get('walkrequests/open', async (req, res) => {
     const query = 'SELECT WalkRequests.request_id AS request_id, Dogs.name AS dog_name, \
-    '
+    Walk'
 });
 
 module.exports = router;

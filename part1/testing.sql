@@ -17,9 +17,9 @@ SELECT * FROM WalkApplications;
 
 SELECT
 Users.username,
-COUNT(WalkRatings.rating_id) ,
-AVG(WalkRatings.rating),
-COUNT(WalkRequests.request_id)
+COUNT(WalkRatings.rating_id) AS total_ratings,
+AVG(WalkRatings.rating) AS average_rating,
+COUNT(WalkRequests.request_id) AS 
 FROM Users
 LEFT JOIN WalkRatings ON Users.user_id=WalkRatings.walker_id
 LEFT JOIN WalkApplications ON WalkApplications.walker_id=Users.user_id

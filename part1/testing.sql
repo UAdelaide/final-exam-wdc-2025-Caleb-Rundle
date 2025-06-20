@@ -22,7 +22,7 @@ WHERE walker_id=2;
 SELECT COUNT(*) FROM WalkApplications
 INNER JOIN WalkRequests on WalkRequests.request_id=WalkApplications.request_id
 WHERE WalkRequests.status='completed'
-WHERE 
+AND WalkApplications.walker_id=2;
 
 /* SELECT
 Users.username AS walker_username,

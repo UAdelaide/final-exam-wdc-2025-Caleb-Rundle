@@ -15,7 +15,7 @@ router.get('/dogs', async (req, res) => {
   } catch (queryError) {
     return res.status(500).send(queryError);
   }
-  return res.status(200).send(query);
+  return res.status(200).send(result);
 });
 
 module.exports = router;

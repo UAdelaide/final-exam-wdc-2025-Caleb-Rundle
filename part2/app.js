@@ -4,19 +4,10 @@ require('dotenv').config();
 const mysql = require('mysql');
 
 const app = express();
-const PORT = 3000;
 
 // Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
-
-app.listen(PORT, (error) => {
-  if (!error) {
-    console.log('Server running on port ' + PORT);
-  } else {
-    console.log('Failure to start: ', error);
-  }
-});
 
 let count = 0;
 app.use((req, res, next) => {

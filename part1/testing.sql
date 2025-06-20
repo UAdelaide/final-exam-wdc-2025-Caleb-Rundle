@@ -16,7 +16,6 @@
 SELECT user_id FROM Users
 WHERE role='walker';
 
-SELECT COUNT(*)
 
 SELECT COUNT(*) FROM WalkRatings
 WHERE walker_id=2;

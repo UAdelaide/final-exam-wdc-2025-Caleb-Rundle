@@ -9,3 +9,5 @@ WalkRequests.duration_minutes,
 WalkRequests.location,
 Users.username AS owner_username
 FROM
+Dogs
+INNER JOIN

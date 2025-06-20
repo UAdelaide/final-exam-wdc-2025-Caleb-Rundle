@@ -17,11 +17,14 @@ SELECT * FROM WalkApplications;
 
 SELECT
 Users.username AS walker_username,
--- count how many walk ratings there are (ignore duplicates)
+-- count ratings
 COUNT(DISTINCT WalkRatings.rating_id) AS total_ratings,
+-- average ratings
 AVG(WalkRatings.rating) AS average_rating,
+-- count complete walks
 COUNT(DISTINCT WalkRequests.request_id) AS completed_walks
 FROM Users
+-- join with walk ratings, but maintin
 LEFT JOIN WalkRatings ON Users.user_id=WalkRatings.walker_id
 LEFT JOIN WalkApplications ON WalkApplications.walker_id=Users.user_id
 LEFT JOIN WalkRequests ON WalkRequests.request_id=WalkApplications.request_id

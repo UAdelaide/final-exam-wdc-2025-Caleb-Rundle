@@ -21,7 +21,7 @@ INSERT INTO Dogs (owner_id, name, size) VALUES
 
 -- You should NOT query by dog name here because dog names are not UNIQUE like with usernames.
 -- I'll hardcode 2 requests and use subqueries for the rest to demonstrate knowledge of both
--- methods as I'm unsure w
+-- methods as I'm unsure whether the question wants you to recognise this fact or not.
 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES
 ()
 

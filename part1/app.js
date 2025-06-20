@@ -13,4 +13,4 @@ app.listen(PORT, (error) => {
 
 const apiRouter = require('./routes/api');
 
-
+app.use('/api', apiRouter);

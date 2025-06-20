@@ -11,9 +11,9 @@
     <div id="app">
       <button type="button" @click="getDog">Get Dog!</button>
 
-      <p v-if="errorMessage">{{ errorMessage }}</p>
+      <p>{{ message }}</p>
 
-      <p>{{ dog }}</p>
+      <img v-if="dog"
     </div>
 
     <script>
@@ -33,7 +33,7 @@
             ).then((res) => res.json());
             if (status == 'success') {
               this.dog = message;
-              this.message = 'Dog Succeed :D'
+              this.message = 'Dog Succeed :D';
             } else {
               this.message = 'Dog Failed D:';
             }

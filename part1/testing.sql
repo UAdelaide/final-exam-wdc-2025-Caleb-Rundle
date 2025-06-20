@@ -27,6 +27,6 @@ GROUP BY WalkRatings.walker_id, Users.username;
 SELECT Users.username, COUNT(WalkRequests.request_id) FROM Users
 LEFT JOIN WalkApplications ON WalkApplications.walker_id=Users.user_id
 LEFT JOIN WalkRequests ON WalkRequests.request_id=WalkApplications.request_id
-WHERE Users.role='walker'
+WHERE Users.role='walker' AND WalkRequests.
 GROUP BY WalkApplications.walker_id, Users.username;
 

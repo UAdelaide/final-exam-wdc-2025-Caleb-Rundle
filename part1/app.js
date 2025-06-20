@@ -7,7 +7,7 @@ const pool = createPool({
   host: 'localhost',
   database: 'DogWalkService'
 });
-import apiRouter from './routes/api';
+import apiRouter from './routes/api.js';
 
 // Start server
 

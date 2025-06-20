@@ -23,7 +23,7 @@
         data() {
           return {
             dog: '',
-            errorMessage: ''
+            message: ''
           };
         },
         methods: {
@@ -34,7 +34,7 @@
             if (status == 'success') {
               this.dog = message;
             } else {
-              this.errorMessage = status;
+              this.message = '';
             }
           }
         }

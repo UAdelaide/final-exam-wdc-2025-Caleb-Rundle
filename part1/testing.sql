@@ -24,6 +24,8 @@ INNER JOIN WalkRequests on WalkRequests.request_id=WalkApplications.request_id
 WHERE WalkRequests.status='completed'
 AND WalkApplications.walker_id=2;
 
+SELECT * FROM WalkApplications;
+
 /* SELECT
 Users.username AS walker_username,
 COUNT(*) AS total_ratings,

@@ -11,7 +11,7 @@ router.get('/dogs', async (req, res) => {
   // 'SELECT Dogs.name, Dogs.size, Users.username FROM Dogs INNER JOIN Users ON Dogs.owner_id=Users.user_id';
 
   try {
-    const result = await req.sqlQuery(query);
+    const result = await req.sqlQuery(query, '');
   } catch (queryError) {
     return res.status(500).send(queryError);
   }

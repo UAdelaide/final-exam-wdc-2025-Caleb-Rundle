@@ -23,7 +23,6 @@
         data() {
           return {
             dog: '',
-            password: '',
             errorMessage: ''
           };
         },
@@ -34,6 +33,7 @@
             );
             if (status == 200) {
               this.dog = message;
+              this.errorMessage = 'Dog good';
             } else {
               this.errorMessage = 'Dog Failed D:';
             }

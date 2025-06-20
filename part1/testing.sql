@@ -28,7 +28,9 @@ CREATE TABLE WalkRatings (
 );
 
 INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments) VALUES
-(1)
+(1),
+(5),
+(1),
 
 SELECT
 Users.username as walker_username,

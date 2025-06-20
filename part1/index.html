@@ -14,44 +14,8 @@
       const { createApp } = Vue;
 
       createApp({
-        data() {
-          return {
-            email: '',
-            password: '',
-            errorMessage: ''
-          };
-        },
-        methods: {
-          async handleLogin() {
-            if (!this.email || !this.password) {
-              this.errorMessage = 'Please enter both email and password.';
-              return;
-            }
-            const { status } = await fetch('/login', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify({
-                email: this.email,
-                password: this.password
-              })
-            });
-            if (status === 200) {
-              window.location.href = '/user/home';
-              return;
-            } else {
-              this.errorMessage = 'Invalid email or password.';
-              return;
-            }
-          },
-          goToRegister() {
-            window.location.href = '/register-page';
-          }
-        },
+        methods: {},
         mounted() {
-          const isDark = localStorage.getItem('theme') === 'dark';
-          document.body.classList.toggle('dark-mode', isDark);
           const toggleBtn = document.getElementById('themeToggle');
           toggleBtn.innerText = isDark ? '☀️ Light' : '🌙 Dark';
           toggleBtn.addEventListener('click', () => {

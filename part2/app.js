@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 require('dotenv').config();
-const mysql = require('mysql');
+import { createPool } from 'mysql';
 
 const app = express();
 

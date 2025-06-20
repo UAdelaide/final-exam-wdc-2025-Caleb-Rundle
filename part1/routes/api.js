@@ -3,9 +3,6 @@ const router = express.Router();
 
 console.log('Loaded routes/api.js');
 
-// SELECT Dogs.name, Dogs.size, Users.username FROM Dogs
-// INNER JOIN Users ON Dogs.owner_id=Users.user_id;
-
 router.get('/dogs', async (req, res) => {
   const query = `
 SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username FROM Dogs

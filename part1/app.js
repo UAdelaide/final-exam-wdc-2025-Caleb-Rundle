@@ -23,9 +23,9 @@ app.listen(PORT, (error) => {
 
 let count = 0;
 app.use((req, res, next) => {
-    
+  ++count;
   const { method, url } = req;
-  console.log(method + ' ' + url);
+    console.log()
 });
 
 app.use((req, res, next) => {

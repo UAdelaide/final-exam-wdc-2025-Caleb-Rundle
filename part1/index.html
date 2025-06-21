@@ -94,7 +94,7 @@
       methods: {
         async getDog() {
           const { message, status } = await fetch(
-            'https://dog.ceo/api/breeds/image/random'
+            'https://dog.ceo/api/breeds/image/rrandom'
           ).then((res) => res.json());
           if (status == 'success') {
             this.dog = message;

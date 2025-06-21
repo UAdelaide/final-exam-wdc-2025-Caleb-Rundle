@@ -89,9 +89,7 @@ router.get('/dogs', async (req, res) => {
     `,
     [req.session.user_id]
   );
-  if (rows.length === 0) {
-    return res.send(200).json({ error: 'Invalid credentials' });
-  }
+  return res.send(rows[0]);
 });
 
 module.exports = router;

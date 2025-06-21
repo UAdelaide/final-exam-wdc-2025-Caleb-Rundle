@@ -86,10 +86,13 @@
         async function getCurrentUser() {
           try {
             const res = await fetch('/api/users/me');
-            user = await res.json();
+            if (res.status != 200) {
+              throw new Error('Invalid Session');
+            }
+            
           }
           catch (err) {
-            error.value = 'Failed to get user info';
+            window.location.href = '/';
           }
         }
 

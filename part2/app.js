@@ -41,13 +41,10 @@ app.use((req, res, next) => {
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 
+app.use('/api', extraRoutes);
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
-app.use('/dogs', async (res, req) => {
-  const [rows] = await db.query('SELECT * FROM Dogs');
-  return res.send(rows);
-});
 
 // Export the app instead of listening here
 module.exports = app;

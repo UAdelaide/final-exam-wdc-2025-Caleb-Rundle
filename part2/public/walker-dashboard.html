@@ -89,7 +89,7 @@
             if (res.status != 200) {
               throw new Error('Invalid Session');
             }
-            
+            user = await res.json();
           }
           catch (err) {
             window.location.href = '/';

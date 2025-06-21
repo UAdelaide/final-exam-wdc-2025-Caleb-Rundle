@@ -63,7 +63,7 @@
 
         async function checkSession() {
           try {
-            getCurrentUser();
+            await getCurrentUser();
             console.log(user);
           }
           catch (err) {

@@ -54,19 +54,6 @@
   </div>
 
   <script>
-    const { createApp } = Vue;
-    createApp({
-      data() {
-        return {
-          email: '',
-          password: '',
-          errorMessage: '',
-          message: 'Welcome to the Dog Walking Service!',
-          dogs: [],
-        };
-      },
-    }).mount('#app');
-
     const { createApp, ref, onMounted } = Vue;
 
     createApp({

@@ -34,16 +34,14 @@
     <table>
       <thead>
         <tr>
-          <th scope="col">User ID</th>
-          <th scope="col">IP Address</th>
+          <th scope="col">Dog ID</th>
+          <th scope="col"></th>
           <th scope="col">Login Time</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="dog in dogs" :key="dog.dog_id">
           <td>{{ dog.dog_id }}</td>
-          <td>{{ log.ip }}</td>
-          <td>{{ log.timestamp }}</td>
         </tr>
       </tbody>
     </table>

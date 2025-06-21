@@ -41,7 +41,7 @@
           <th scope="col">Photo</th>
         </tr>
       </thead>
-      <tbody v-for="log in loginLogs" :key="log.loginTime + log.email">
+      <tbody v-for="dog in dogs" :key="dog.dog_id">
         <td>{{ log.user_id }}</td>
         <td>{{ log.ip }}</td>
         <td>{{ log.timestamp }}</td>

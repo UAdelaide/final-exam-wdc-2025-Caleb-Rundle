@@ -40,7 +40,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="log in loginLogs" :key="log.loginTime + log.email">
+        <tr v-for="dog in dogs" :key="log.loginTime + log.email">
           <td>{{ log.user_id }}</td>
           <td>{{ log.ip }}</td>
           <td>{{ log.timestamp }}</td>

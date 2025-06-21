@@ -39,10 +39,12 @@
           <th scope="col">Login Time</th>
         </tr>
       </thead>
-      <tbody v-for="log in loginLogs" :key="log.loginTime + log.email">
-        <td>{{ log.user_id }}</td>
-        <td>{{ log.ip }}</td>
-        <td>{{ log.timestamp }}</td>
+      <tbody>
+        <tr v-for="log in loginLogs" :key="log.loginTime + log.email">
+          <td>{{ log.user_id }}</td>
+          <td>{{ log.ip }}</td>
+          <td>{{ log.timestamp }}</td>
+        </tr>
       </tbody>
     </table>
   </div>

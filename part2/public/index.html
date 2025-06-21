@@ -65,6 +65,20 @@
         };
       },
       methods: {
+        const dogs = ref([]);
+        const walks = ref([]);
+        const message = ref('');
+        const error = ref('');
+
+        async function loadDogs() {
+          try {
+            const res = await fetch('/api/users/dogs');
+            dogs.value = await res.json();
+            console.log(dogs.value);
+          } catch (err) {
+            error.value = 'Failed to load dogs';
+          }
+        }
         async handleLogin() {
           if (!this.email || !this.password) {
             this.errorMessage = 'Please enter both email and password.';

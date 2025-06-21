@@ -67,9 +67,6 @@
         });
 
         const dogs = ref([]);
-        const walks = ref([]);
-        const message = ref('');
-        const error = ref('');
 
         async function loadDogs() {
           try {
@@ -115,9 +112,7 @@
 
 
         onMounted(async () => {
-          await checkSession();
           loadDogs();
-          loadWalks();
         });
 
         return {

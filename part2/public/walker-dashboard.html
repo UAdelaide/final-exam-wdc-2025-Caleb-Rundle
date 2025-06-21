@@ -95,7 +95,9 @@
           catch (err) {
             window.location.href = '/';
           }
-        } async function applyToWalk(requestId) {
+        }
+
+        async function applyToWalk(requestId) {
           try {
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',

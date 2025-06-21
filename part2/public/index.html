@@ -33,9 +33,11 @@
 
     <table>
       <thead>
-        <th scope="col">User ID</th>
-        <th scope="col">IP Address</th>
-        <th>Login Time</th>
+        <tr>
+          <th scope="col">User ID</th>
+          <th scope="col">IP Address</th>
+          <th scope="col">Login Time</th>
+        </tr>
       </thead>
       <tbody v-for="log in loginLogs" :key="log.loginTime + log.email">
         <td>{{ log.user_id }}</td>

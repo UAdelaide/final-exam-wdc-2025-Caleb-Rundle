@@ -4,7 +4,7 @@ const db = require('../models/db');
 
 router.get('/dogs', async (req, res) => {
   const [rows] = await db.query('SELECT * FROM Dogs');
-  const l = rows.length();
+  const l = rows.length;
   const { message, status } = await fetch(
     `https://dog.ceo/api/breeds/image/random/${l}`
   ).then((response) => response.json());

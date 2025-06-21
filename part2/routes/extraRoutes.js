@@ -4,7 +4,8 @@ const db = require('../models/db');
 
 router.get('/dogs', async (req, res) => {
   const [rows] = await db.query('SELECT * FROM Dogs');
-    rows.
+  const l = rows.length();
+    
   return res.send(rows);
 });
 

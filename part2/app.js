@@ -12,7 +12,15 @@ app.use(
   session({
     secret: 'change-in-production',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    cookie: {
+      secure: true,
+      // Enable only for HTTPS
+      httpOnly: true,
+      // Prevent client-side access to cookies
+      sameSite: 'strict'
+      // Mitigate CSRF attacks
+    }
   })
 );
 

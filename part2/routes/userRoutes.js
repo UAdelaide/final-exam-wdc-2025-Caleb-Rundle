@@ -92,6 +92,4 @@ router.get('/dogs', async (req, res) => {
   return res.send(rows);
 });
 
-
-
 module.exports = router;

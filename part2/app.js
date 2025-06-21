@@ -16,6 +16,7 @@ app.use(
     cookie: {
       secure: true,
       // Enable only for HTTPS
+      httpOnly: true,
       // Prevent client-side access to cookies
       sameSite: 'strict'
       // Mitigate CSRF attacks

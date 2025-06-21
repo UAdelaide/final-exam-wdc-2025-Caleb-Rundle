@@ -98,6 +98,15 @@
           this.errorMessage = 'Invalid email or password.';
           return;
         },
+
+        async loadDogs() {
+          try {
+            const res = await fetch('/api/users/dogs');
+            dogs.value = await res.json();
+          } catch (err) {
+            error.value = 'Failed to load dogs';
+          }
+        }
       }
     }).mount('#app');
   </script>

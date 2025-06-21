@@ -109,6 +109,10 @@
             this.errorMessage = 'Failed to load dogs';
           }
         }
+      },
+
+      mounted() {
+        this.loadDogs();
       }
     }).mount('#app');
   </script>

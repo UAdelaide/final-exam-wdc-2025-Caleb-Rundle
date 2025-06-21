@@ -11,7 +11,7 @@ router.get('/dog-images/:quantity', async (req, res) => {
   const quantity = req.params.quantity;
   const { message, status } = await fetch(
     `https://dog.ceo/api/breeds/image/random/${quantity}`
-  ).then(res) => res.json());;
+  ).then((res) => res.json());
     if
 });
 

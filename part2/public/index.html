@@ -54,7 +54,10 @@
           <td>{{ dog.size }}</td>
           <td>{{ dog.owner_id }}</td>
           <td>
-            <div id="image-box"></div>></td>
+            <div id="image-box">
+              <img class="img-thumbnail mh-25" :src="dog.photo" alt="Photo of {{dog.name}}">
+            </div>
+          </td>
         </tr>
       </tbody>
     </table>

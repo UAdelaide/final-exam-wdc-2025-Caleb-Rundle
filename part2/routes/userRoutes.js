@@ -89,7 +89,6 @@ router.get('/dogs', async (req, res) => {
     `,
     [req.session.user_id]
   );
-  console.log(rows);
   return res.send(rows);
 });
 

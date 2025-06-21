@@ -61,15 +61,11 @@
           email: '',
           password: '',
           errorMessage: '',
-          message: 'Welcome to the Dog Walking Service!'
-          dogs: '',
+          message: 'Welcome to the Dog Walking Service!',
+          dogs: {},
         };
       },
       methods: {
-        const dogs = ref([]);
-        const walks = ref([]);
-        const message = ref('');
-        const error = ref('');
 
         async function loadDogs() {
       try {

@@ -66,46 +66,47 @@
         };
       },
       methods: {
-        async function loadDogs() {
-      try {
-        const res = await fetch('/api/users/dogs');
-        dogs.value = await res.json();
-        console.log(dogs.value);
-      } catch(err) {
-        error.value = 'Failed to load dogs';
-      }
-    }
-        async handleLogin() {
-      if(!this.email || !this.password) {
-      this.errorMessage = 'Please enter both email and password.';
-      return;
-    }
-    const response = await fetch('/api/users/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        email: this.email,
-        password: this.password
-      })
-    });
+        async loadDogs() {
+          try {
+            const res = await fetch('/api/users/dogs');
+            dogs.value = await res.json();
+            console.log(dogs.value);
+          } catch (err) {
+            error.value = 'Failed to load dogs';
+          }
+        }
 
-    if (response.status === 200) {
-      const user = await response.json();
-      if (user.role == 'owner') {
-        window.location.href = 'owner-dashboard.html';
-        return;
-      }
-      if (user.role == 'walker') {
-        window.location.href = 'walker-dashboard.html';
-        return;
-      }
-      this.errorMessage = 'Account is invalid!';
-      return;
-    }
-    this.errorMessage = 'Invalid email or password.';
-    return;
+        async handleLogin() {
+          if (!this.email || !this.password) {
+            this.errorMessage = 'Please enter both email and password.';
+            return;
+          }
+          const response = await fetch('/api/users/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              email: this.email,
+              password: this.password
+            })
+          });
+
+          if (response.status === 200) {
+            const user = await response.json();
+            if (user.role == 'owner') {
+              window.location.href = 'owner-dashboard.html';
+              return;
+            }
+            if (user.role == 'walker') {
+              window.location.href = 'walker-dashboard.html';
+              return;
+            }
+            this.errorMessage = 'Account is invalid!';
+            return;
+          }
+          this.errorMessage = 'Invalid email or password.';
+          return;
         },
       }
     }).mount('#app');

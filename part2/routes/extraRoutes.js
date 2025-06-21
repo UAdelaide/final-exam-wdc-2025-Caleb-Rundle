@@ -9,7 +9,7 @@ router.get('/dogs', async (req, res) => {
 
 router.get('/dog-images/:quantity', async (req, res) => {
   const quantity = req.params.quantity;
-    const 
+    const https://dog.ceo/api/breeds/image/random/3
 });
 
 module.exports = router;

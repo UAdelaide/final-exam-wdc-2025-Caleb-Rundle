@@ -40,11 +40,11 @@ app.use((req, res, next) => {
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
+const extraRoutes = require('./routes/extraRoutes');
 
 app.use('/api', extraRoutes);
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
-
 
 // Export the app instead of listening here
 module.exports = app;

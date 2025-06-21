@@ -93,9 +93,6 @@ router.get('/dogs', async (req, res) => {
 });
 
 router.get('/allDogs', async (req, res) => {
-  if (!req.session.user || req.session.user.role !== 'owner') {
-    return res.status(401).json({ error: 'Invalid credentials' });
-  }
   const [rows] = await db.query(
     `
     SELECT dog_id, name FROM Dogs

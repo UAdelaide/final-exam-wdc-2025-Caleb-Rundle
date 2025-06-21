@@ -7,8 +7,9 @@ router.get('/dogs', async (req, res) => {
   return res.send(rows);
 });
 
-router.get('/dog-images/:count', async (req, res) => {
-    const quantity=;
-})
+router.get('/dog-images/:quantity', async (req, res) => {
+  const quantity = req.params.quantity;
+    const 
+});
 
 module.exports = router;

@@ -85,10 +85,17 @@
         }
 
         async function getCurrentUser() {
-
-        }
-
-        async function applyToWalk(requestId) {
+          try {
+            const res = await fetch('/api/users/me');
+            if (res.status != 200) {
+              throw new Error('Invalid Session');
+            }
+            user = await res.json();
+          }
+          catch (err) {
+            window.location.href = '/';
+          }
+        } async function applyToWalk(requestId) {
           try {
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',

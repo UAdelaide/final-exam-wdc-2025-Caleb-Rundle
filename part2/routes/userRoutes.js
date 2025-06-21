@@ -79,6 +79,7 @@ router.get('/logout', (req, res) => {
 });
 
 router.get('/dogs', async (req, res) => {
+  console.log(req.session.user);
   if (req.session.user.role !== 'owner') {
     return res.status(401).json({ error: 'Invalid credentials' });
   }

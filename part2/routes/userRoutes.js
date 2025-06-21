@@ -93,12 +93,7 @@ router.get('/dogs', async (req, res) => {
 });
 
 router.get('/allDogs', async (req, res) => {
-  const [rows] = await db.query(
-    `
-    SELECT dog_id, name FROM Dogs
-    `,
-    [req.session.user.user_id]
-  );
+  const [rows] = await db.query('SELECT dog_id, name FROM Dogs');
   return res.send(rows);
 });
 

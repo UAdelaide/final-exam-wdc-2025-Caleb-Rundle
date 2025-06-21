@@ -8,7 +8,8 @@ router.get('/dogs', async (req, res) => {
 });
 
 router.get('/dog-images/:quantity', async (req, res) => {
-    const {message, status } = await fetch(`https://dog.ceo/api/breeds/image/random/${quantity}`)
+    const 
+    const {message, status } = await fetch(`https://dog.ceo/api/breeds/image/random/${req.params.quantity}`);
   const quantity = req.params.quantity;
     const query = https://dog.ceo/api/breeds/image/random/3
 });

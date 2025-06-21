@@ -43,5 +43,10 @@ const userRoutes = require('./routes/userRoutes');
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
+
+app.use('/dogs'){}
+  const [rows] = await db.query('SELECT * FROM Dogs');
+  return res.send(rows);
+
 // Export the app instead of listening here
 module.exports = app;

@@ -14,7 +14,7 @@ app.use(
     resave: false,
     saveUninitialized: false,
     cookie: {
-      secure: true,
+      secure: false,
       // Enable only for HTTPS
       httpOnly: true,
       // Prevent client-side access to cookies

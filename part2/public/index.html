@@ -76,7 +76,7 @@
           }
         },
 
-              }
+      }
     }).mount('#app');
 
     const { createApp, ref, onMounted } = Vue;
@@ -103,7 +103,8 @@
             error.value = 'Failed to load dogs';
           }
         }
-        async handleLogin() {
+
+        async function handleLogin() {
           if (!this.email || !this.password) {
             this.errorMessage = 'Please enter both email and password.';
             return;
@@ -134,7 +135,7 @@
           }
           this.errorMessage = 'Invalid email or password.';
           return;
-        },
+        }
 
 
         onMounted(async () => {

@@ -67,7 +67,8 @@
             if (res.status != 200) {
               throw new Error('Invalid Session');
             }
-            user_id = 
+            const user = res.json();
+            user_id =
           }
           catch (err) {
             window.location.href = '/';

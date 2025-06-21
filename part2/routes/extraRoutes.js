@@ -11,6 +11,7 @@ router.get('/dogs', async (req, res) => {
   if (status !== 'success') {
     return res.status(501).send(message);
   }
+    for ()
   rows.forEach((r, i) => {
     r.photo = message;
   });

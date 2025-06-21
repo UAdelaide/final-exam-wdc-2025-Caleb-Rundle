@@ -32,11 +32,11 @@
     <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
 
     <table>
-      <tr>
+      <tbody>
         <th scope="col">User ID</th>
         <th scope="col">IP Address</th>
         <th>Login Time</th>
-      </tr>
+      </tbody>
       <tr v-for="log in loginLogs" :key="log.loginTime + log.email">
         <td>{{ log.user_id }}</td>
         <td>{{ log.ip }}</td>

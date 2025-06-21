@@ -104,6 +104,7 @@
           try {
             const res = await fetch('/api/dogs');
             this.dogs = await res.json();
+            console.log(this.dogs);
           } catch (err) {
             this.errorMessage = 'Failed to load dogs';
           }

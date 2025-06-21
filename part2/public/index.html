@@ -30,6 +30,19 @@
     </form>
 
     <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
+
+    <table>
+      <tr>
+        <th>User ID</th>
+        <th>IP Address</th>
+        <th>Login Time</th>
+      </tr>
+      <tr v-for="log in loginLogs" :key="log.loginTime + log.email">
+        <td>{{ log.user_id }}</td>
+        <td>{{ log.ip }}</td>
+        <td>{{ log.timestamp }}</td>
+      </tr>
+    </table>
   </div>
 
   <script>

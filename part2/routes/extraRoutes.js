@@ -11,8 +11,7 @@ router.get('/dogs', async (req, res) => {
   if (status === 'success') {
     return res.status(200).send(message);
   }
-    
-
+    rows.forEach(r => {})
   return res.send(rows);
 });
 

@@ -63,10 +63,7 @@
 
         async function checkSession() {
           try {
-            const res = await fetch('/api/users/me');
-            if (res.status != 200) {
-              throw new Error('Invalid Session');
-            }
+            getCurrentUser();
           }
           catch (err) {
             window.location.href = '/';

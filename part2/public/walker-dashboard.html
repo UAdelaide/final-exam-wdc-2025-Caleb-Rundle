@@ -82,6 +82,7 @@
 
         async function getCurrentUser() {
           const res = await fetch('/api/users/me');
+          console.log(res);
           if (res.status != 200) {
             throw new Error('Invalid Session');
           }

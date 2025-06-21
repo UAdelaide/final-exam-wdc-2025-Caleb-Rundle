@@ -12,7 +12,9 @@ router.get('/dog-images/:quantity', async (req, res) => {
   const { message, status } = await fetch(
     `https://dog.ceo/api/breeds/image/random/${quantity}`
   ).then((res) => res.json());
-    if
+    if (status == 'success') {
+        retu
+    }
 });
 
 module.exports = router;

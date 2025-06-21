@@ -7,6 +7,6 @@ router.get('/dogs', async (req, res) => {
   return res.send(rows);
 });
 
-router.get('/dog-images', async (req, res))
+router.get('/dog-images/:count', async (req, res))
 
 module.exports = router;

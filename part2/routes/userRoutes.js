@@ -87,7 +87,7 @@ router.get('/dogs', async (req, res) => {
     SELECT dog_id, name FROM Dogs
     WHERE owner_id = ?
     `,
-    [req.session.user_id]
+    [req.session.user.user_id]
   );
   return res.send(rows);
 });
